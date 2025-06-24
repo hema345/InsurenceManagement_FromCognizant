@@ -1,0 +1,38 @@
+2025-06-02 13:54:28.184 +05:30 [INF] User profile is available. Using 'C:\Users\2403521\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-02 13:54:28.560 +05:30 [INF] Now listening on: http://localhost:5016
+2025-06-02 13:54:28.681 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-02 13:54:28.683 +05:30 [INF] Hosting environment: Development
+2025-06-02 13:54:28.684 +05:30 [INF] Content root path: C:\Users\2403521\Downloads\InsuranceManagementSystemFinal\InsuranceManagementSystem\InsuranceManagementSystem Final\InsurenceManagementSystemWebApi
+2025-06-02 13:54:29.971 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/swagger/index.html - null null
+2025-06-02 13:54:30.792 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/swagger/index.html - 200 null text/html;charset=utf-8 839.0666ms
+2025-06-02 13:54:30.836 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-02 13:54:30.841 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/_framework/aspnetcore-browser-refresh.js - 200 16547 application/javascript; charset=utf-8 5.9075ms
+2025-06-02 13:54:30.847 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/_vs/browserLink - null null
+2025-06-02 13:54:31.010 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/_vs/browserLink - 200 null text/javascript; charset=UTF-8 163.4007ms
+2025-06-02 13:54:31.072 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/swagger/v1/swagger.json - null null
+2025-06-02 13:54:31.174 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 102.2047ms
+2025-06-02 13:55:05.149 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/api/Customer/policies - null null
+2025-06-02 13:55:05.168 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-06-02 13:55:07.316 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi)'
+2025-06-02 13:55:07.365 +05:30 [INF] Route matched with {action = "GetRegisteredPolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRegisteredPolicies() on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-02 13:55:12.008 +05:30 [INF] Executed DbCommand (287ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PolicyId], [p].[AgentId], [p].[AvailablePolicyId], [p].[CustomerId], [p].[ExpiryDate], [p].[IssuedDate], [a].[AgentId], [a].[ContactInfo], [a].[Name], [a].[UserId], [a0].[AvailablePolicyId], [a0].[BasePremium], [a0].[CoverageDetails], [a0].[Name], [a0].[ValidityPeriod]
+FROM [Policies] AS [p]
+INNER JOIN [Agents] AS [a] ON [p].[AgentId] = [a].[AgentId]
+INNER JOIN [AvailablePolicies] AS [a0] ON [p].[AvailablePolicyId] = [a0].[AvailablePolicyId]
+WHERE [p].[CustomerId] = @__customerId_0
+2025-06-02 13:55:12.195 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Collections.Generic.IEnumerable`1[[InsurenceManagementSystemWebApi.Applications.DTOs.CustomerPoliciesResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-02 13:55:12.249 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi) in 4873.8446ms
+2025-06-02 13:55:12.254 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi)'
+2025-06-02 13:55:12.270 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/api/Customer/policies - 200 null application/json; charset=utf-8 7120.8842ms
+2025-06-02 18:03:39.710 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/api/Customer/policy-requests - null null
+2025-06-02 18:03:39.747 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi)'
+2025-06-02 18:03:39.755 +05:30 [INF] Route matched with {action = "GetPolicyRequests", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPolicyRequests() on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-02 18:03:39.897 +05:30 [INF] Executed DbCommand (39ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[RequestId], [p].[AvailablePolicyId], [p].[CustomerId], [p].[RequestedOn], [p].[Status]
+FROM [PolicyRequests] AS [p]
+WHERE [p].[CustomerId] = @__customerId_0
+2025-06-02 18:03:39.923 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Collections.Generic.IEnumerable`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PolicyRequestStatusResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-02 18:03:39.934 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi) in 174.87ms
+2025-06-02 18:03:39.938 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi)'
+2025-06-02 18:03:39.945 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/api/Customer/policy-requests - 200 null application/json; charset=utf-8 237.0136ms

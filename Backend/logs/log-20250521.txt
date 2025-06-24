@@ -1,0 +1,88 @@
+2025-05-21 11:07:04.323 +05:30 [INF] User profile is available. Using 'C:\Users\2403521\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-21 11:07:04.675 +05:30 [INF] Now listening on: http://localhost:5016
+2025-05-21 11:07:04.790 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-21 11:07:04.791 +05:30 [INF] Hosting environment: Development
+2025-05-21 11:07:04.792 +05:30 [INF] Content root path: C:\Users\2403521\Downloads\InsuranceManagementSystemFinal\InsuranceManagementSystem\InsuranceManagementSystem Final\InsurenceManagementSystemWebApi
+2025-05-21 11:07:05.648 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/swagger/index.html - null null
+2025-05-21 11:07:07.999 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/swagger/index.html - 200 null text/html;charset=utf-8 2363.9926ms
+2025-05-21 11:07:08.020 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/_vs/browserLink - null null
+2025-05-21 11:07:08.020 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-21 11:07:08.029 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/_framework/aspnetcore-browser-refresh.js - 200 16547 application/javascript; charset=utf-8 10.1456ms
+2025-05-21 11:07:08.107 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/_vs/browserLink - 200 null text/javascript; charset=UTF-8 88.3021ms
+2025-05-21 11:07:08.260 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/swagger/v1/swagger.json - null null
+2025-05-21 11:07:08.325 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 65.6548ms
+2025-05-21 14:19:39.137 +05:30 [INF] User profile is available. Using 'C:\Users\2403521\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-21 14:19:39.493 +05:30 [INF] Now listening on: http://localhost:5016
+2025-05-21 14:19:39.574 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-21 14:19:39.575 +05:30 [INF] Hosting environment: Development
+2025-05-21 14:19:39.575 +05:30 [INF] Content root path: C:\Users\2403521\Downloads\InsuranceManagementSystemFinal\InsuranceManagementSystem\InsuranceManagementSystem Final\InsurenceManagementSystemWebApi
+2025-05-21 14:19:40.347 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/swagger/index.html - null null
+2025-05-21 14:19:42.441 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/swagger/index.html - 200 null text/html;charset=utf-8 2106.0813ms
+2025-05-21 14:19:42.470 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-21 14:19:42.478 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/_framework/aspnetcore-browser-refresh.js - 200 16547 application/javascript; charset=utf-8 8.7833ms
+2025-05-21 14:19:42.485 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/_vs/browserLink - null null
+2025-05-21 14:19:42.527 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/_vs/browserLink - 200 null text/javascript; charset=UTF-8 42.348ms
+2025-05-21 14:19:42.586 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/swagger/v1/swagger.json - null null
+2025-05-21 14:19:42.618 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 32.3191ms
+2025-05-21 14:20:31.829 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5016/api/Auth/login - application/json 57
+2025-05-21 14:20:31.848 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-05-21 14:20:31.851 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.AuthController.Login (InsurenceManagementSystemWebApi)'
+2025-05-21 14:20:31.871 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(InsurenceManagementSystemWebApi.Applications.DTOs.LoginRequestDto) on controller InsurenceManagementSystemWebApi.Controllers.AuthController (InsurenceManagementSystemWebApi).
+2025-05-21 14:20:51.695 +05:30 [INF] Executed DbCommand (112ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[IsDeleted], [u].[PasswordHash], [u].[Username], [u0].[UserId], [u0].[RoleId], [r].[Id], [r].[Name]
+FROM [Users] AS [u]
+LEFT JOIN [UserRoles] AS [u0] ON [u].[Id] = [u0].[UserId]
+LEFT JOIN [Roles] AS [r] ON [u0].[RoleId] = [r].[Id]
+WHERE [u].[Username] = @__username_0
+2025-05-21 14:21:38.221 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.LoginResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-21 14:21:41.141 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.AuthController.Login (InsurenceManagementSystemWebApi) in 69257.9518ms
+2025-05-21 14:21:41.145 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.AuthController.Login (InsurenceManagementSystemWebApi)'
+2025-05-21 14:21:46.532 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5016/api/Auth/login - 401 null application/json; charset=utf-8 74703.5671ms
+2025-05-21 17:18:49.407 +05:30 [INF] User profile is available. Using 'C:\Users\2403521\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-21 17:18:49.881 +05:30 [INF] Now listening on: http://localhost:5016
+2025-05-21 17:18:50.017 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-21 17:18:50.019 +05:30 [INF] Hosting environment: Development
+2025-05-21 17:18:50.019 +05:30 [INF] Content root path: C:\Users\2403521\Downloads\InsuranceManagementSystemFinal\InsuranceManagementSystem\InsuranceManagementSystem Final\InsurenceManagementSystemWebApi
+2025-05-21 17:18:50.825 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/swagger/index.html - null null
+2025-05-21 17:18:53.507 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/swagger/index.html - 200 null text/html;charset=utf-8 2693.6111ms
+2025-05-21 17:18:53.535 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/_vs/browserLink - null null
+2025-05-21 17:18:53.535 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-21 17:18:53.544 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/_framework/aspnetcore-browser-refresh.js - 200 16547 application/javascript; charset=utf-8 10.8008ms
+2025-05-21 17:18:53.577 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/_vs/browserLink - 200 null text/javascript; charset=UTF-8 43.5664ms
+2025-05-21 17:18:53.666 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/swagger/v1/swagger.json - null null
+2025-05-21 17:18:53.729 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 63.6668ms
+2025-05-21 17:20:45.766 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/api/Admin/claims - null null
+2025-05-21 17:20:45.927 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-05-21 17:20:45.936 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.AdminController.GetAllClaims (InsurenceManagementSystemWebApi)'
+2025-05-21 17:20:45.989 +05:30 [INF] Route matched with {action = "GetAllClaims", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.ClaimStatusResponseDtoForCustomer]]] GetAllClaims(Int32, Int32) on controller InsurenceManagementSystemWebApi.Controllers.AdminController (InsurenceManagementSystemWebApi).
+2025-05-21 17:21:18.005 +05:30 [INF] Executed DbCommand (141ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[ClaimId], [c].[AgentId], [c].[ClaimAmount], [c].[CustomerId], [c].[FiledDate], [c].[PolicyId], [c].[Status], [p].[PolicyId], [p].[AgentId], [p].[AvailablePolicyId], [p].[CustomerId], [p].[ExpiryDate], [p].[IssuedDate], [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[Name], [a].[ValidityPeriod]
+FROM [Claims] AS [c]
+INNER JOIN [Policies] AS [p] ON [c].[PolicyId] = [p].[PolicyId]
+INNER JOIN [AvailablePolicies] AS [a] ON [p].[AvailablePolicyId] = [a].[AvailablePolicyId]
+2025-05-21 17:52:53.463 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/api/Admin/claims - null null
+2025-05-21 17:52:53.463 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/api/Admin/policy-requests - null null
+2025-05-21 17:52:53.477 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.AdminController.GetAllClaims (InsurenceManagementSystemWebApi)'
+2025-05-21 17:52:53.477 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.AdminController.GetAllPolicyRequests (InsurenceManagementSystemWebApi)'
+2025-05-21 17:52:53.478 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.ClaimStatusResponseDtoForAdmin, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-21 17:52:53.479 +05:30 [INF] Route matched with {action = "GetAllClaims", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.ClaimStatusResponseDtoForCustomer]]] GetAllClaims(Int32, Int32) on controller InsurenceManagementSystemWebApi.Controllers.AdminController (InsurenceManagementSystemWebApi).
+2025-05-21 17:52:53.482 +05:30 [INF] Route matched with {action = "GetAllPolicyRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.PolicyRequestStatusResponseDto]]] GetAllPolicyRequests(Int32, Int32) on controller InsurenceManagementSystemWebApi.Controllers.AdminController (InsurenceManagementSystemWebApi).
+2025-05-21 17:52:55.255 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.AdminController.GetAllClaims (InsurenceManagementSystemWebApi) in 1929250.6766ms
+2025-05-21 17:52:55.259 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.AdminController.GetAllClaims (InsurenceManagementSystemWebApi)'
+2025-05-21 17:52:55.260 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[ClaimId], [c].[AgentId], [c].[ClaimAmount], [c].[CustomerId], [c].[FiledDate], [c].[PolicyId], [c].[Status], [p].[PolicyId], [p].[AgentId], [p].[AvailablePolicyId], [p].[CustomerId], [p].[ExpiryDate], [p].[IssuedDate], [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[Name], [a].[ValidityPeriod]
+FROM [Claims] AS [c]
+INNER JOIN [Policies] AS [p] ON [c].[PolicyId] = [p].[PolicyId]
+INNER JOIN [AvailablePolicies] AS [a] ON [p].[AvailablePolicyId] = [a].[AvailablePolicyId]
+2025-05-21 17:52:55.270 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.ClaimStatusResponseDtoForAdmin, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-21 17:52:55.275 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[RequestId], [p].[AvailablePolicyId], [p].[CustomerId], [p].[RequestedOn], [p].[Status]
+FROM [PolicyRequests] AS [p]
+2025-05-21 17:52:55.275 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.AdminController.GetAllClaims (InsurenceManagementSystemWebApi) in 1793.8997ms
+2025-05-21 17:52:55.276 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/api/Admin/claims - 499 null application/json; charset=utf-8 1929510.2099ms
+2025-05-21 17:52:55.279 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.AdminController.GetAllClaims (InsurenceManagementSystemWebApi)'
+2025-05-21 17:52:55.283 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PolicyRequestStatusResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-21 17:52:55.284 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/api/Admin/claims - 200 null application/json; charset=utf-8 1821.5125ms
+2025-05-21 17:52:55.298 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.AdminController.GetAllPolicyRequests (InsurenceManagementSystemWebApi) in 90.3092ms
+2025-05-21 17:52:55.301 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.AdminController.GetAllPolicyRequests (InsurenceManagementSystemWebApi)'
+2025-05-21 17:52:55.304 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/api/Admin/policy-requests - 200 null application/json; charset=utf-8 1840.1746ms

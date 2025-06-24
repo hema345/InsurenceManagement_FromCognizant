@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\2403452\\OneDrive - Cognizant\\Desktop\\Final Evaluation\\Backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BABF3777-D432-3C61-879A-E648F650F95A}|InsurenceManagementSystemWebApi.csproj|c:\\users\\2403452\\onedrive - cognizant\\desktop\\final evaluation\\backend\\applications\\middlewares\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BABF3777-D432-3C61-879A-E648F650F95A}|InsurenceManagementSystemWebApi.csproj|solutionrelative:applications\\middlewares\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ExceptionMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\2403452\\OneDrive - Cognizant\\Desktop\\Final Evaluation\\Backend\\Applications\\MiddleWares\\ExceptionMiddleware.cs",
+              "RelativeDocumentMoniker": "Applications\\MiddleWares\\ExceptionMiddleware.cs",
+              "ToolTip": "C:\\Users\\2403452\\OneDrive - Cognizant\\Desktop\\Final Evaluation\\Backend\\Applications\\MiddleWares\\ExceptionMiddleware.cs",
+              "RelativeToolTip": "Applications\\MiddleWares\\ExceptionMiddleware.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAtwBkAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T04:58:03.314Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

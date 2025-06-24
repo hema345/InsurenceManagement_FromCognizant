@@ -1,0 +1,140 @@
+2025-05-22 10:24:52.459 +05:30 [INF] User profile is available. Using 'C:\Users\2403521\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-22 10:24:52.839 +05:30 [INF] Now listening on: http://localhost:5016
+2025-05-22 10:24:52.973 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-22 10:24:52.974 +05:30 [INF] Hosting environment: Development
+2025-05-22 10:24:52.974 +05:30 [INF] Content root path: C:\Users\2403521\Downloads\InsuranceManagementSystemFinal\InsuranceManagementSystem\InsuranceManagementSystem Final\InsurenceManagementSystemWebApi
+2025-05-22 10:24:54.078 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/swagger/index.html - null null
+2025-05-22 10:24:56.979 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/swagger/index.html - 200 null text/html;charset=utf-8 2912.2276ms
+2025-05-22 10:24:57.008 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-22 10:24:57.011 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/_vs/browserLink - null null
+2025-05-22 10:24:57.014 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/_framework/aspnetcore-browser-refresh.js - 200 16547 application/javascript; charset=utf-8 7.6338ms
+2025-05-22 10:24:57.088 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/_vs/browserLink - 200 null text/javascript; charset=UTF-8 76.9144ms
+2025-05-22 10:24:57.151 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/swagger/v1/swagger.json - null null
+2025-05-22 10:24:57.206 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 55.3023ms
+2025-05-22 10:26:02.630 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/api/Admin/available-policies/?page=1 - null null
+2025-05-22 10:26:02.831 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-05-22 10:26:02.847 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.AdminController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-05-22 10:26:02.905 +05:30 [INF] Route matched with {action = "GetAllAvailablePolicies", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto]]] GetAllAvailablePolicies(Int32, Int32) on controller InsurenceManagementSystemWebApi.Controllers.AdminController (InsurenceManagementSystemWebApi).
+2025-05-22 10:26:03.977 +05:30 [INF] GetAllAvailablePoliciesAsync started
+2025-05-22 10:26:05.951 +05:30 [INF] Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[Name], [a].[ValidityPeriod]
+FROM [AvailablePolicies] AS [a]
+2025-05-22 10:26:06.017 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-22 10:26:06.041 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.AdminController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi) in 3119.2121ms
+2025-05-22 10:26:06.046 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.AdminController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-05-22 10:26:06.058 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/api/Admin/available-policies/?page=1 - 200 null application/json; charset=utf-8 3428.1066ms
+2025-05-22 10:27:29.993 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5016/api/Admin/available-policy - application/json 139
+2025-05-22 10:27:30.021 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.AdminController.AddAvailablePolicy (InsurenceManagementSystemWebApi)'
+2025-05-22 10:27:30.030 +05:30 [INF] Route matched with {action = "AddAvailablePolicy", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddAvailablePolicy(InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyRequestDto) on controller InsurenceManagementSystemWebApi.Controllers.AdminController (InsurenceManagementSystemWebApi).
+2025-05-22 10:27:30.307 +05:30 [INF] Executed DbCommand (148ms) [Parameters=[@p0='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AvailablePolicies] ([BasePremium], [CoverageDetails], [Name], [ValidityPeriod])
+OUTPUT INSERTED.[AvailablePolicyId]
+VALUES (@p0, @p1, @p2, @p3);
+2025-05-22 10:27:30.338 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-22 10:27:30.347 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.AdminController.AddAvailablePolicy (InsurenceManagementSystemWebApi) in 307.202ms
+2025-05-22 10:27:30.353 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.AdminController.AddAvailablePolicy (InsurenceManagementSystemWebApi)'
+2025-05-22 10:27:30.359 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5016/api/Admin/available-policy - 200 null application/json; charset=utf-8 365.3017ms
+2025-05-22 12:54:52.549 +05:30 [INF] User profile is available. Using 'C:\Users\2403521\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-22 12:54:52.930 +05:30 [INF] Now listening on: http://localhost:5016
+2025-05-22 12:54:53.051 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-22 12:54:53.053 +05:30 [INF] Hosting environment: Development
+2025-05-22 12:54:53.054 +05:30 [INF] Content root path: C:\Users\2403521\Downloads\InsuranceManagementSystemFinal\InsuranceManagementSystem\InsuranceManagementSystem Final\InsurenceManagementSystemWebApi
+2025-05-22 12:54:53.853 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/swagger/index.html - null null
+2025-05-22 12:54:55.977 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/swagger/index.html - 200 null text/html;charset=utf-8 2135.8262ms
+2025-05-22 12:54:55.992 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/_vs/browserLink - null null
+2025-05-22 12:54:56.019 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-22 12:54:56.028 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/_framework/aspnetcore-browser-refresh.js - 200 16547 application/javascript; charset=utf-8 9.0705ms
+2025-05-22 12:54:56.107 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/_vs/browserLink - 200 null text/javascript; charset=UTF-8 115.9686ms
+2025-05-22 12:54:56.168 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/swagger/v1/swagger.json - null null
+2025-05-22 12:54:56.237 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 69.264ms
+2025-05-22 12:55:04.537 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/api/Admin/1/Avilable-policy - null null
+2025-05-22 12:55:04.626 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-05-22 12:55:04.628 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/api/Admin/1/Avilable-policy - 404 0 null 91.3593ms
+2025-05-22 12:55:04.632 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5016/api/Admin/1/Avilable-policy, Response status code: 404
+2025-05-22 12:56:07.142 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/api/Admin/1/Avilable-policy - null null
+2025-05-22 12:56:07.152 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/api/Admin/1/Avilable-policy - 404 0 null 9.9666ms
+2025-05-22 12:56:07.157 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5016/api/Admin/1/Avilable-policy, Response status code: 404
+2025-05-22 12:56:39.315 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/api/Admin/1/Avilable-policy - null null
+2025-05-22 12:56:39.317 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/api/Admin/1/Avilable-policy - 404 0 null 2.3147ms
+2025-05-22 12:56:39.319 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5016/api/Admin/1/Avilable-policy, Response status code: 404
+2025-05-22 12:57:57.991 +05:30 [INF] User profile is available. Using 'C:\Users\2403521\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-22 12:57:58.584 +05:30 [INF] Now listening on: http://localhost:5016
+2025-05-22 12:57:58.782 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-22 12:57:58.784 +05:30 [INF] Hosting environment: Development
+2025-05-22 12:57:58.791 +05:30 [INF] Content root path: C:\Users\2403521\Downloads\InsuranceManagementSystemFinal\InsuranceManagementSystem\InsuranceManagementSystem Final\InsurenceManagementSystemWebApi
+2025-05-22 12:57:59.703 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/swagger/index.html - null null
+2025-05-22 12:58:00.512 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/swagger/index.html - 200 null text/html;charset=utf-8 825.6221ms
+2025-05-22 12:58:00.540 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-22 12:58:00.545 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/_framework/aspnetcore-browser-refresh.js - 200 16547 application/javascript; charset=utf-8 6.6669ms
+2025-05-22 12:58:00.633 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/_vs/browserLink - null null
+2025-05-22 12:58:00.709 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/_vs/browserLink - 200 null text/javascript; charset=UTF-8 75.2413ms
+2025-05-22 12:58:00.854 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/swagger/v1/swagger.json - null null
+2025-05-22 12:58:00.925 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 71.8448ms
+2025-05-22 12:59:35.862 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/api/Admin/1/Avilable-policy - null null
+2025-05-22 12:59:35.935 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-05-22 12:59:35.938 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/api/Admin/1/Avilable-policy - 404 0 null 75.8055ms
+2025-05-22 12:59:35.946 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5016/api/Admin/1/Avilable-policy, Response status code: 404
+2025-05-22 13:00:04.609 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/api/Admin/1/Available-policy - null null
+2025-05-22 13:00:04.622 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.AdminController.GetAvailablePolicyByIdAsync (InsurenceManagementSystemWebApi)'
+2025-05-22 13:00:04.646 +05:30 [INF] Route matched with {action = "GetAvailablePolicyById", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto]] GetAvailablePolicyByIdAsync(Int32) on controller InsurenceManagementSystemWebApi.Controllers.AdminController (InsurenceManagementSystemWebApi).
+2025-05-22 13:00:19.683 +05:30 [INF] Executed DbCommand (153ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[Name], [a].[ValidityPeriod]
+FROM [AvailablePolicies] AS [a]
+WHERE [a].[AvailablePolicyId] = @__p_0
+2025-05-22 13:00:47.842 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-22 13:00:49.355 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.AdminController.GetAvailablePolicyByIdAsync (InsurenceManagementSystemWebApi) in 44692.9145ms
+2025-05-22 13:00:49.362 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.AdminController.GetAvailablePolicyByIdAsync (InsurenceManagementSystemWebApi)'
+2025-05-22 13:00:49.877 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/api/Admin/1/Available-policy - 200 null application/json; charset=utf-8 45268.3824ms
+2025-05-22 13:01:58.355 +05:30 [INF] User profile is available. Using 'C:\Users\2403521\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-22 13:01:58.537 +05:30 [INF] Now listening on: http://localhost:5016
+2025-05-22 13:01:58.613 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-22 13:01:58.615 +05:30 [INF] Hosting environment: Development
+2025-05-22 13:01:58.616 +05:30 [INF] Content root path: C:\Users\2403521\Downloads\InsuranceManagementSystemFinal\InsuranceManagementSystem\InsuranceManagementSystem Final\InsurenceManagementSystemWebApi
+2025-05-22 13:01:59.105 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/swagger/index.html - null null
+2025-05-22 13:01:59.520 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/swagger/index.html - 200 null text/html;charset=utf-8 431.412ms
+2025-05-22 13:01:59.532 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-22 13:01:59.532 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/_vs/browserLink - null null
+2025-05-22 13:01:59.536 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/_framework/aspnetcore-browser-refresh.js - 200 16547 application/javascript; charset=utf-8 5.0181ms
+2025-05-22 13:01:59.586 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/_vs/browserLink - 200 null text/javascript; charset=UTF-8 54.9645ms
+2025-05-22 13:01:59.659 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/swagger/v1/swagger.json - null null
+2025-05-22 13:01:59.711 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 51.5884ms
+2025-05-22 13:02:09.703 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/api/Admin/8/Available-policy - null null
+2025-05-22 13:02:09.753 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-05-22 13:02:09.757 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.AdminController.GetAvailablePolicyByIdAsync (InsurenceManagementSystemWebApi)'
+2025-05-22 13:02:09.782 +05:30 [INF] Route matched with {action = "GetAvailablePolicyById", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto]] GetAvailablePolicyByIdAsync(Int32) on controller InsurenceManagementSystemWebApi.Controllers.AdminController (InsurenceManagementSystemWebApi).
+2025-05-22 13:02:24.503 +05:30 [INF] Executed DbCommand (48ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[Name], [a].[ValidityPeriod]
+FROM [AvailablePolicies] AS [a]
+WHERE [a].[AvailablePolicyId] = @__p_0
+2025-05-22 13:03:21.288 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-22 13:03:26.390 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.AdminController.GetAvailablePolicyByIdAsync (InsurenceManagementSystemWebApi) in 76598.811ms
+2025-05-22 13:03:26.399 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.AdminController.GetAvailablePolicyByIdAsync (InsurenceManagementSystemWebApi)'
+2025-05-22 13:03:29.128 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/api/Admin/8/Available-policy - 200 null application/json; charset=utf-8 79424.8834ms
+2025-05-22 13:13:40.749 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5016/api/Admin/available-policy - application/json 139
+2025-05-22 13:13:40.766 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.AdminController.AddAvailablePolicy (InsurenceManagementSystemWebApi)'
+2025-05-22 13:13:40.771 +05:30 [INF] Route matched with {action = "AddAvailablePolicy", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddAvailablePolicy(InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyRequestDto) on controller InsurenceManagementSystemWebApi.Controllers.AdminController (InsurenceManagementSystemWebApi).
+2025-05-22 13:14:25.732 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[@p0='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AvailablePolicies] ([BasePremium], [CoverageDetails], [Name], [ValidityPeriod])
+OUTPUT INSERTED.[AvailablePolicyId]
+VALUES (@p0, @p1, @p2, @p3);
+2025-05-22 13:14:40.778 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-22 13:14:42.301 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.AdminController.AddAvailablePolicy (InsurenceManagementSystemWebApi) in 61528.6407ms
+2025-05-22 13:14:42.304 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.AdminController.AddAvailablePolicy (InsurenceManagementSystemWebApi)'
+2025-05-22 13:14:43.699 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5016/api/Admin/available-policy - 200 null application/json; charset=utf-8 62949.7102ms
+2025-05-22 14:09:59.628 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5016/api/Admin/available-policy - application/json 141
+2025-05-22 14:09:59.640 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.AdminController.AddAvailablePolicy (InsurenceManagementSystemWebApi)'
+2025-05-22 14:09:59.642 +05:30 [INF] Route matched with {action = "AddAvailablePolicy", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddAvailablePolicy(InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyRequestDto) on controller InsurenceManagementSystemWebApi.Controllers.AdminController (InsurenceManagementSystemWebApi).
+2025-05-22 14:11:58.251 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[@p0='?' (Precision = 10) (Scale = 2) (DbType = Decimal), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AvailablePolicies] ([BasePremium], [CoverageDetails], [Name], [ValidityPeriod])
+OUTPUT INSERTED.[AvailablePolicyId]
+VALUES (@p0, @p1, @p2, @p3);
+2025-05-22 14:13:25.264 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-22 14:13:28.167 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.AdminController.AddAvailablePolicy (InsurenceManagementSystemWebApi) in 208523.3157ms
+2025-05-22 14:13:28.171 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.AdminController.AddAvailablePolicy (InsurenceManagementSystemWebApi)'
+2025-05-22 14:13:28.569 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5016/api/Admin/available-policy - 200 null application/json; charset=utf-8 208940.8091ms

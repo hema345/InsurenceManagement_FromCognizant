@@ -1,0 +1,1079 @@
+2025-06-15 17:07:39.581 +05:30 [INF] User profile is available. Using 'C:\Users\2403521\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-15 17:07:40.142 +05:30 [INF] Now listening on: https://localhost:7153
+2025-06-15 17:07:40.146 +05:30 [INF] Now listening on: http://localhost:5016
+2025-06-15 17:07:40.237 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-15 17:07:40.239 +05:30 [INF] Hosting environment: Development
+2025-06-15 17:07:40.240 +05:30 [INF] Content root path: C:\Users\2403521\Downloads\XML-DOC-IMS\InsuranceManagementSystem\InsuranceManagementSystem Final\InsurenceManagementSystemWebApi
+2025-06-15 17:07:42.353 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/swagger/index.html - null null
+2025-06-15 17:07:42.756 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/swagger/index.html - 200 null text/html;charset=utf-8 418.9047ms
+2025-06-15 17:07:42.773 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/_vs/browserLink - null null
+2025-06-15 17:07:42.773 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-15 17:07:42.795 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/_framework/aspnetcore-browser-refresh.js - 200 16547 application/javascript; charset=utf-8 22.0438ms
+2025-06-15 17:07:42.889 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/_vs/browserLink - 200 null text/javascript; charset=UTF-8 115.7811ms
+2025-06-15 17:07:43.024 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/swagger/v1/swagger.json - null null
+2025-06-15 17:07:43.180 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 155.5772ms
+2025-06-15 17:16:31.776 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7153/api/Auth/login - null null
+2025-06-15 17:16:31.801 +05:30 [INF] CORS policy execution successful.
+2025-06-15 17:16:31.807 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7153/api/Auth/login - 204 null null 30.8296ms
+2025-06-15 17:16:31.813 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7153/api/Auth/login - application/json 49
+2025-06-15 17:16:31.818 +05:30 [INF] CORS policy execution successful.
+2025-06-15 17:16:33.597 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.AuthController.Login (InsurenceManagementSystemWebApi)'
+2025-06-15 17:16:33.628 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(InsurenceManagementSystemWebApi.Applications.DTOs.LoginRequestDto) on controller InsurenceManagementSystemWebApi.Controllers.AuthController (InsurenceManagementSystemWebApi).
+2025-06-15 17:16:34.685 +05:30 [INF] Attempting login for username: Krishna_20
+2025-06-15 17:16:37.348 +05:30 [INF] Executed DbCommand (223ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[IsDeleted], [u].[PasswordHash], [u].[UpdatedAt], [u].[UpdatedBy], [u].[Username], [u0].[UserId], [u0].[RoleId], [u0].[CreatedAt], [u0].[CreatedBy], [u0].[UpdatedAt], [u0].[UpdatedBy], [r].[Id], [r].[Name]
+FROM [Users] AS [u]
+LEFT JOIN [UserRoles] AS [u0] ON [u].[Id] = [u0].[UserId]
+LEFT JOIN [Roles] AS [r] ON [u0].[RoleId] = [r].[Id]
+WHERE [u].[Username] = @__username_0
+2025-06-15 17:16:37.870 +05:30 [INF] User 'Krishna_20' (User ID: "46b23b43-59a2-4b06-a046-7693c706a883", Role: Admin) logged in successfully.
+2025-06-15 17:16:37.894 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.LoginResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-15 17:16:37.915 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.AuthController.Login (InsurenceManagementSystemWebApi) in 4271.676ms
+2025-06-15 17:16:37.920 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.AuthController.Login (InsurenceManagementSystemWebApi)'
+2025-06-15 17:16:37.946 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7153/api/Auth/login - 200 null application/json; charset=utf-8 6132.7816ms
+2025-06-15 17:16:40.360 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Admin/customers?page=1&size=10 - null null
+2025-06-15 17:16:40.372 +05:30 [INF] CORS policy execution successful.
+2025-06-15 17:16:40.445 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.AdminController.GetAllCustomers (InsurenceManagementSystemWebApi)'
+2025-06-15 17:16:40.465 +05:30 [INF] Route matched with {action = "GetAllCustomers", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCustomers(Int32, Int32) on controller InsurenceManagementSystemWebApi.Controllers.AdminController (InsurenceManagementSystemWebApi).
+2025-06-15 17:16:40.507 +05:30 [INF] Attempting to retrieve all customers. Page: 1, Size: 10
+2025-06-15 17:16:40.606 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CustomerId], [c].[Address], [c].[CreatedAt], [c].[CreatedBy], [c].[DateOfBirth], [c].[Email], [c].[Name], [c].[Phone], [c].[UpdatedAt], [c].[UpdatedBy], [c].[UserId], [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[IsDeleted], [u].[PasswordHash], [u].[UpdatedAt], [u].[UpdatedBy], [u].[Username]
+FROM [Customers] AS [c]
+INNER JOIN [Users] AS [u] ON [c].[UserId] = [u].[Id]
+2025-06-15 17:16:40.654 +05:30 [INF] Successfully retrieved 8 customers for page 1.
+2025-06-15 17:16:40.656 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.CustomerProfileResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-15 17:16:40.673 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.AdminController.GetAllCustomers (InsurenceManagementSystemWebApi) in 195.4909ms
+2025-06-15 17:16:40.676 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.AdminController.GetAllCustomers (InsurenceManagementSystemWebApi)'
+2025-06-15 17:16:40.676 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Admin/customers?page=1&size=10 - null null
+2025-06-15 17:16:40.678 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Admin/customers?page=1&size=10 - 200 null application/json; charset=utf-8 318.8247ms
+2025-06-15 17:16:40.689 +05:30 [INF] CORS policy execution successful.
+2025-06-15 17:16:40.693 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.AdminController.GetAllCustomers (InsurenceManagementSystemWebApi)'
+2025-06-15 17:16:40.695 +05:30 [INF] Route matched with {action = "GetAllCustomers", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCustomers(Int32, Int32) on controller InsurenceManagementSystemWebApi.Controllers.AdminController (InsurenceManagementSystemWebApi).
+2025-06-15 17:16:40.703 +05:30 [INF] Attempting to retrieve all customers. Page: 1, Size: 10
+2025-06-15 17:16:40.762 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CustomerId], [c].[Address], [c].[CreatedAt], [c].[CreatedBy], [c].[DateOfBirth], [c].[Email], [c].[Name], [c].[Phone], [c].[UpdatedAt], [c].[UpdatedBy], [c].[UserId], [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[IsDeleted], [u].[PasswordHash], [u].[UpdatedAt], [u].[UpdatedBy], [u].[Username]
+FROM [Customers] AS [c]
+INNER JOIN [Users] AS [u] ON [c].[UserId] = [u].[Id]
+2025-06-15 17:16:40.773 +05:30 [INF] Successfully retrieved 8 customers for page 1.
+2025-06-15 17:16:40.778 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.CustomerProfileResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-15 17:16:40.781 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.AdminController.GetAllCustomers (InsurenceManagementSystemWebApi) in 84.396ms
+2025-06-15 17:16:40.790 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.AdminController.GetAllCustomers (InsurenceManagementSystemWebApi)'
+2025-06-15 17:16:40.798 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Admin/customers?page=1&size=10 - 200 null application/json; charset=utf-8 122.4145ms
+2025-06-15 17:22:58.220 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7153/api/Auth/login - null null
+2025-06-15 17:22:58.230 +05:30 [INF] CORS policy execution successful.
+2025-06-15 17:22:58.234 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7153/api/Auth/login - 204 null null 14.0112ms
+2025-06-15 17:22:58.236 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7153/api/Auth/login - application/json 51
+2025-06-15 17:22:58.260 +05:30 [INF] CORS policy execution successful.
+2025-06-15 17:22:58.265 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.AuthController.Login (InsurenceManagementSystemWebApi)'
+2025-06-15 17:22:58.271 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(InsurenceManagementSystemWebApi.Applications.DTOs.LoginRequestDto) on controller InsurenceManagementSystemWebApi.Controllers.AuthController (InsurenceManagementSystemWebApi).
+2025-06-15 17:22:58.275 +05:30 [INF] Attempting login for username: Rathna_2004
+2025-06-15 17:22:58.691 +05:30 [INF] Executed DbCommand (26ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[IsDeleted], [u].[PasswordHash], [u].[UpdatedAt], [u].[UpdatedBy], [u].[Username], [u0].[UserId], [u0].[RoleId], [u0].[CreatedAt], [u0].[CreatedBy], [u0].[UpdatedAt], [u0].[UpdatedBy], [r].[Id], [r].[Name]
+FROM [Users] AS [u]
+LEFT JOIN [UserRoles] AS [u0] ON [u].[Id] = [u0].[UserId]
+LEFT JOIN [Roles] AS [r] ON [u0].[RoleId] = [r].[Id]
+WHERE [u].[Username] = @__username_0
+2025-06-15 17:22:58.831 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[CustomerId], [c].[Address], [c].[CreatedAt], [c].[CreatedBy], [c].[DateOfBirth], [c].[Email], [c].[Name], [c].[Phone], [c].[UpdatedAt], [c].[UpdatedBy], [c].[UserId]
+FROM [Customers] AS [c]
+WHERE [c].[UserId] = @__userId_0
+2025-06-15 17:22:58.844 +05:30 [INF] User 'Rathna_2004' (User ID: "8f359361-c940-4177-83e0-b8ef6162cb3d", Role: Customer) logged in successfully.
+2025-06-15 17:22:58.854 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.LoginResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-15 17:22:58.858 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.AuthController.Login (InsurenceManagementSystemWebApi) in 585.1797ms
+2025-06-15 17:22:58.861 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.AuthController.Login (InsurenceManagementSystemWebApi)'
+2025-06-15 17:22:58.868 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7153/api/Auth/login - 200 null application/json; charset=utf-8 632.3113ms
+2025-06-15 17:23:02.740 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/policies - null null
+2025-06-15 17:23:02.745 +05:30 [INF] CORS policy execution successful.
+2025-06-15 17:23:02.748 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 17:23:02.758 +05:30 [INF] Route matched with {action = "GetRegisteredPolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRegisteredPolicies() on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 17:23:02.768 +05:30 [INF] Attempting to retrieve registered policies for customer.
+2025-06-15 17:23:02.816 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PolicyId], [p].[AgentId], [p].[AvailablePolicyId], [p].[CreatedAt], [p].[CreatedBy], [p].[CustomerId], [p].[ExpiryDate], [p].[IssuedDate], [p].[UpdatedAt], [p].[UpdatedBy], [a].[AgentId], [a].[ContactInfo], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[UserId], [a0].[AvailablePolicyId], [a0].[BasePremium], [a0].[CoverageDetails], [a0].[CreatedAt], [a0].[CreatedBy], [a0].[Name], [a0].[UpdatedAt], [a0].[UpdatedBy], [a0].[ValidityPeriod]
+FROM [Policies] AS [p]
+INNER JOIN [Agents] AS [a] ON [p].[AgentId] = [a].[AgentId]
+INNER JOIN [AvailablePolicies] AS [a0] ON [p].[AvailablePolicyId] = [a0].[AvailablePolicyId]
+WHERE [p].[CustomerId] = @__customerId_0
+2025-06-15 17:23:02.858 +05:30 [INF] Successfully retrieved 9 registered policies for Customer ID 1.
+2025-06-15 17:23:02.864 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Collections.Generic.IEnumerable`1[[InsurenceManagementSystemWebApi.Applications.DTOs.CustomerPoliciesResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-15 17:23:02.874 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi) in 109.9664ms
+2025-06-15 17:23:02.877 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 17:23:02.878 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/policies - 200 null application/json; charset=utf-8 138.5429ms
+2025-06-15 17:24:49.154 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/policies - null null
+2025-06-15 17:24:49.162 +05:30 [INF] CORS policy execution successful.
+2025-06-15 17:24:49.167 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 17:24:49.170 +05:30 [INF] Route matched with {action = "GetRegisteredPolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRegisteredPolicies() on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 17:24:49.179 +05:30 [INF] Attempting to retrieve registered policies for customer.
+2025-06-15 17:24:49.206 +05:30 [INF] Executed DbCommand (21ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PolicyId], [p].[AgentId], [p].[AvailablePolicyId], [p].[CreatedAt], [p].[CreatedBy], [p].[CustomerId], [p].[ExpiryDate], [p].[IssuedDate], [p].[UpdatedAt], [p].[UpdatedBy], [a].[AgentId], [a].[ContactInfo], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[UserId], [a0].[AvailablePolicyId], [a0].[BasePremium], [a0].[CoverageDetails], [a0].[CreatedAt], [a0].[CreatedBy], [a0].[Name], [a0].[UpdatedAt], [a0].[UpdatedBy], [a0].[ValidityPeriod]
+FROM [Policies] AS [p]
+INNER JOIN [Agents] AS [a] ON [p].[AgentId] = [a].[AgentId]
+INNER JOIN [AvailablePolicies] AS [a0] ON [p].[AvailablePolicyId] = [a0].[AvailablePolicyId]
+WHERE [p].[CustomerId] = @__customerId_0
+2025-06-15 17:24:49.211 +05:30 [INF] Successfully retrieved 9 registered policies for Customer ID 1.
+2025-06-15 17:24:49.213 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Collections.Generic.IEnumerable`1[[InsurenceManagementSystemWebApi.Applications.DTOs.CustomerPoliciesResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-15 17:24:49.217 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi) in 38.5927ms
+2025-06-15 17:24:49.221 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 17:24:49.226 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/policies - 200 null application/json; charset=utf-8 72.0256ms
+2025-06-15 17:26:36.422 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - null null
+2025-06-15 17:26:36.423 +05:30 [INF] CORS policy execution successful.
+2025-06-15 17:26:36.425 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi)'
+2025-06-15 17:26:36.428 +05:30 [INF] Route matched with {action = "GetPolicyRequests", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPolicyRequests() on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 17:26:36.441 +05:30 [INF] Attempting to retrieve policy requests for customer.
+2025-06-15 17:26:36.469 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[RequestId], [p].[AvailablePolicyId], [p].[CreatedAt], [p].[CreatedBy], [p].[CustomerId], [p].[RequestedOn], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [PolicyRequests] AS [p]
+WHERE [p].[CustomerId] = @__customerId_0
+2025-06-15 17:26:36.484 +05:30 [INF] Successfully retrieved 10 policy requests for Customer ID 1.
+2025-06-15 17:26:36.488 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Collections.Generic.IEnumerable`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PolicyRequestStatusResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-15 17:26:36.490 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi) in 59.7966ms
+2025-06-15 17:26:36.492 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi)'
+2025-06-15 17:26:36.493 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - 200 null application/json; charset=utf-8 72.1192ms
+2025-06-15 17:26:48.502 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/policies - null null
+2025-06-15 17:26:48.506 +05:30 [INF] CORS policy execution successful.
+2025-06-15 17:26:48.510 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 17:26:48.512 +05:30 [INF] Route matched with {action = "GetRegisteredPolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRegisteredPolicies() on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 17:26:48.517 +05:30 [INF] Attempting to retrieve registered policies for customer.
+2025-06-15 17:26:48.535 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PolicyId], [p].[AgentId], [p].[AvailablePolicyId], [p].[CreatedAt], [p].[CreatedBy], [p].[CustomerId], [p].[ExpiryDate], [p].[IssuedDate], [p].[UpdatedAt], [p].[UpdatedBy], [a].[AgentId], [a].[ContactInfo], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[UserId], [a0].[AvailablePolicyId], [a0].[BasePremium], [a0].[CoverageDetails], [a0].[CreatedAt], [a0].[CreatedBy], [a0].[Name], [a0].[UpdatedAt], [a0].[UpdatedBy], [a0].[ValidityPeriod]
+FROM [Policies] AS [p]
+INNER JOIN [Agents] AS [a] ON [p].[AgentId] = [a].[AgentId]
+INNER JOIN [AvailablePolicies] AS [a0] ON [p].[AvailablePolicyId] = [a0].[AvailablePolicyId]
+WHERE [p].[CustomerId] = @__customerId_0
+2025-06-15 17:26:48.544 +05:30 [INF] Successfully retrieved 9 registered policies for Customer ID 1.
+2025-06-15 17:26:48.548 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Collections.Generic.IEnumerable`1[[InsurenceManagementSystemWebApi.Applications.DTOs.CustomerPoliciesResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-15 17:26:48.552 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi) in 35.3204ms
+2025-06-15 17:26:48.556 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 17:26:48.557 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/policies - 200 null application/json; charset=utf-8 55.0664ms
+2025-06-15 17:32:55.547 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/policies - null null
+2025-06-15 17:32:55.566 +05:30 [INF] CORS policy execution successful.
+2025-06-15 17:32:55.575 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 17:32:55.584 +05:30 [INF] Route matched with {action = "GetRegisteredPolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRegisteredPolicies() on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 17:32:55.599 +05:30 [INF] Attempting to retrieve registered policies for customer.
+2025-06-15 17:32:56.490 +05:30 [INF] Executed DbCommand (31ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PolicyId], [p].[AgentId], [p].[AvailablePolicyId], [p].[CreatedAt], [p].[CreatedBy], [p].[CustomerId], [p].[ExpiryDate], [p].[IssuedDate], [p].[UpdatedAt], [p].[UpdatedBy], [a].[AgentId], [a].[ContactInfo], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[UserId], [a0].[AvailablePolicyId], [a0].[BasePremium], [a0].[CoverageDetails], [a0].[CreatedAt], [a0].[CreatedBy], [a0].[Name], [a0].[UpdatedAt], [a0].[UpdatedBy], [a0].[ValidityPeriod]
+FROM [Policies] AS [p]
+INNER JOIN [Agents] AS [a] ON [p].[AgentId] = [a].[AgentId]
+INNER JOIN [AvailablePolicies] AS [a0] ON [p].[AvailablePolicyId] = [a0].[AvailablePolicyId]
+WHERE [p].[CustomerId] = @__customerId_0
+2025-06-15 17:32:56.495 +05:30 [INF] Successfully retrieved 9 registered policies for Customer ID 1.
+2025-06-15 17:32:56.497 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Collections.Generic.IEnumerable`1[[InsurenceManagementSystemWebApi.Applications.DTOs.CustomerPoliciesResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-15 17:32:56.500 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi) in 902.1038ms
+2025-06-15 17:32:56.502 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 17:32:56.503 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/policies - 200 null application/json; charset=utf-8 956.3237ms
+2025-06-15 17:36:04.789 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - null null
+2025-06-15 17:36:04.793 +05:30 [INF] CORS policy execution successful.
+2025-06-15 17:36:04.795 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 17:36:04.802 +05:30 [INF] Route matched with {action = "GetAllAvailablePolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto]]] GetAllAvailablePolicies(Int32, Int32) on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 17:36:04.809 +05:30 [INF] Attempting to retrieve all available policies for customer. Page: 1, Size: 10
+2025-06-15 17:36:04.839 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[ValidityPeriod]
+FROM [AvailablePolicies] AS [a]
+2025-06-15 17:36:04.849 +05:30 [INF] Successfully retrieved 6 available policies for page 1.
+2025-06-15 17:36:04.858 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-15 17:36:04.867 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi) in 60.6387ms
+2025-06-15 17:36:04.870 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - null null
+2025-06-15 17:36:04.872 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 17:36:04.874 +05:30 [INF] CORS policy execution successful.
+2025-06-15 17:36:04.875 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - 200 null application/json; charset=utf-8 86.5546ms
+2025-06-15 17:36:04.884 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 17:36:04.889 +05:30 [INF] Route matched with {action = "GetAllAvailablePolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto]]] GetAllAvailablePolicies(Int32, Int32) on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 17:36:04.894 +05:30 [INF] Attempting to retrieve all available policies for customer. Page: 1, Size: 10
+2025-06-15 17:36:04.898 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[ValidityPeriod]
+FROM [AvailablePolicies] AS [a]
+2025-06-15 17:36:04.902 +05:30 [INF] Successfully retrieved 6 available policies for page 1.
+2025-06-15 17:36:04.904 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-15 17:36:04.905 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi) in 11.8426ms
+2025-06-15 17:36:04.906 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 17:36:04.907 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - 200 null application/json; charset=utf-8 37.5726ms
+2025-06-15 17:36:20.334 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - null null
+2025-06-15 17:36:20.337 +05:30 [INF] CORS policy execution successful.
+2025-06-15 17:36:20.339 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi)'
+2025-06-15 17:36:20.341 +05:30 [INF] Route matched with {action = "GetPolicyRequests", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPolicyRequests() on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 17:36:20.346 +05:30 [INF] Attempting to retrieve policy requests for customer.
+2025-06-15 17:36:20.359 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[RequestId], [p].[AvailablePolicyId], [p].[CreatedAt], [p].[CreatedBy], [p].[CustomerId], [p].[RequestedOn], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [PolicyRequests] AS [p]
+WHERE [p].[CustomerId] = @__customerId_0
+2025-06-15 17:36:20.368 +05:30 [INF] Successfully retrieved 10 policy requests for Customer ID 1.
+2025-06-15 17:36:20.371 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Collections.Generic.IEnumerable`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PolicyRequestStatusResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-15 17:36:20.378 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi) in 33.1207ms
+2025-06-15 17:36:20.382 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi)'
+2025-06-15 17:36:20.384 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - 200 null application/json; charset=utf-8 50.6485ms
+2025-06-15 17:36:46.653 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - null null
+2025-06-15 17:36:46.673 +05:30 [INF] CORS policy execution successful.
+2025-06-15 17:36:46.680 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 17:36:46.690 +05:30 [INF] Route matched with {action = "GetAllAvailablePolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto]]] GetAllAvailablePolicies(Int32, Int32) on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 17:36:46.705 +05:30 [INF] Attempting to retrieve all available policies for customer. Page: 1, Size: 10
+2025-06-15 17:36:46.741 +05:30 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[ValidityPeriod]
+FROM [AvailablePolicies] AS [a]
+2025-06-15 17:36:46.752 +05:30 [INF] Successfully retrieved 6 available policies for page 1.
+2025-06-15 17:36:46.758 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-15 17:36:46.766 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi) in 64.028ms
+2025-06-15 17:36:46.774 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - null null
+2025-06-15 17:36:46.777 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 17:36:46.785 +05:30 [INF] CORS policy execution successful.
+2025-06-15 17:36:46.790 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - 200 null application/json; charset=utf-8 138.8147ms
+2025-06-15 17:36:46.792 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 17:36:46.798 +05:30 [INF] Route matched with {action = "GetAllAvailablePolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto]]] GetAllAvailablePolicies(Int32, Int32) on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 17:36:46.808 +05:30 [INF] Attempting to retrieve all available policies for customer. Page: 1, Size: 10
+2025-06-15 17:36:46.814 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[ValidityPeriod]
+FROM [AvailablePolicies] AS [a]
+2025-06-15 17:36:46.817 +05:30 [INF] Successfully retrieved 6 available policies for page 1.
+2025-06-15 17:36:46.819 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-15 17:36:46.821 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi) in 14.6974ms
+2025-06-15 17:36:46.823 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 17:36:46.825 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - 200 null application/json; charset=utf-8 51.7534ms
+2025-06-15 17:36:50.169 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - null null
+2025-06-15 17:36:50.189 +05:30 [INF] CORS policy execution successful.
+2025-06-15 17:36:50.197 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi)'
+2025-06-15 17:36:50.208 +05:30 [INF] Route matched with {action = "GetPolicyRequests", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPolicyRequests() on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 17:36:50.222 +05:30 [INF] Attempting to retrieve policy requests for customer.
+2025-06-15 17:36:50.239 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[RequestId], [p].[AvailablePolicyId], [p].[CreatedAt], [p].[CreatedBy], [p].[CustomerId], [p].[RequestedOn], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [PolicyRequests] AS [p]
+WHERE [p].[CustomerId] = @__customerId_0
+2025-06-15 17:36:50.256 +05:30 [INF] Successfully retrieved 10 policy requests for Customer ID 1.
+2025-06-15 17:36:50.269 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Collections.Generic.IEnumerable`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PolicyRequestStatusResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-15 17:36:50.285 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi) in 63.6092ms
+2025-06-15 17:36:50.296 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi)'
+2025-06-15 17:36:50.309 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - 200 null application/json; charset=utf-8 140.1289ms
+2025-06-15 17:37:10.004 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/profile - null null
+2025-06-15 17:37:10.024 +05:30 [INF] CORS policy execution successful.
+2025-06-15 17:37:10.028 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetProfile (InsurenceManagementSystemWebApi)'
+2025-06-15 17:37:10.046 +05:30 [INF] Route matched with {action = "GetProfile", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProfile() on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 17:37:10.067 +05:30 [INF] Attempting to retrieve customer profile.
+2025-06-15 17:37:10.133 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[CustomerId], [c].[Address], [c].[CreatedAt], [c].[CreatedBy], [c].[DateOfBirth], [c].[Email], [c].[Name], [c].[Phone], [c].[UpdatedAt], [c].[UpdatedBy], [c].[UserId], [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[IsDeleted], [u].[PasswordHash], [u].[UpdatedAt], [u].[UpdatedBy], [u].[Username]
+FROM [Customers] AS [c]
+INNER JOIN [Users] AS [u] ON [c].[UserId] = [u].[Id]
+WHERE [c].[CustomerId] = @__customerId_0
+2025-06-15 17:37:10.149 +05:30 [INF] Successfully retrieved customer profile for Customer ID 1.
+2025-06-15 17:37:10.150 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.CustomerProfileResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-15 17:37:10.153 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetProfile (InsurenceManagementSystemWebApi) in 93.1199ms
+2025-06-15 17:37:10.154 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetProfile (InsurenceManagementSystemWebApi)'
+2025-06-15 17:37:10.155 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/profile - 200 null application/json; charset=utf-8 153.5489ms
+2025-06-15 17:39:40.195 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - null null
+2025-06-15 17:39:40.215 +05:30 [INF] CORS policy execution successful.
+2025-06-15 17:39:40.223 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 17:39:40.230 +05:30 [INF] Route matched with {action = "GetAllAvailablePolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto]]] GetAllAvailablePolicies(Int32, Int32) on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 17:39:40.242 +05:30 [INF] Attempting to retrieve all available policies for customer. Page: 1, Size: 10
+2025-06-15 17:39:40.267 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[ValidityPeriod]
+FROM [AvailablePolicies] AS [a]
+2025-06-15 17:39:40.279 +05:30 [INF] Successfully retrieved 6 available policies for page 1.
+2025-06-15 17:39:40.284 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-15 17:39:40.290 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi) in 50.0131ms
+2025-06-15 17:39:40.297 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - null null
+2025-06-15 17:39:40.306 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 17:39:40.319 +05:30 [INF] CORS policy execution successful.
+2025-06-15 17:39:40.326 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - 200 null application/json; charset=utf-8 131.553ms
+2025-06-15 17:39:40.329 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 17:39:40.353 +05:30 [INF] Route matched with {action = "GetAllAvailablePolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto]]] GetAllAvailablePolicies(Int32, Int32) on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 17:39:40.370 +05:30 [INF] Attempting to retrieve all available policies for customer. Page: 1, Size: 10
+2025-06-15 17:39:40.385 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[ValidityPeriod]
+FROM [AvailablePolicies] AS [a]
+2025-06-15 17:39:40.393 +05:30 [INF] Successfully retrieved 6 available policies for page 1.
+2025-06-15 17:39:40.398 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-15 17:39:40.402 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi) in 33.5772ms
+2025-06-15 17:39:40.408 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 17:39:40.413 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - 200 null application/json; charset=utf-8 116.7464ms
+2025-06-15 17:43:42.704 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - null null
+2025-06-15 17:43:42.718 +05:30 [INF] CORS policy execution successful.
+2025-06-15 17:43:42.725 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi)'
+2025-06-15 17:43:42.734 +05:30 [INF] Route matched with {action = "GetPolicyRequests", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPolicyRequests() on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 17:43:42.756 +05:30 [INF] Attempting to retrieve policy requests for customer.
+2025-06-15 17:43:42.791 +05:30 [INF] Executed DbCommand (24ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[RequestId], [p].[AvailablePolicyId], [p].[CreatedAt], [p].[CreatedBy], [p].[CustomerId], [p].[RequestedOn], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [PolicyRequests] AS [p]
+WHERE [p].[CustomerId] = @__customerId_0
+2025-06-15 17:43:42.798 +05:30 [INF] Successfully retrieved 10 policy requests for Customer ID 1.
+2025-06-15 17:43:42.799 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Collections.Generic.IEnumerable`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PolicyRequestStatusResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-15 17:43:42.803 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi) in 47.6241ms
+2025-06-15 17:43:42.807 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi)'
+2025-06-15 17:43:42.811 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - 200 null application/json; charset=utf-8 108.9868ms
+2025-06-15 17:50:26.482 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/policies - null null
+2025-06-15 17:50:26.496 +05:30 [INF] CORS policy execution successful.
+2025-06-15 17:50:26.498 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 17:50:26.500 +05:30 [INF] Route matched with {action = "GetRegisteredPolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRegisteredPolicies() on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 17:50:26.502 +05:30 [INF] Attempting to retrieve registered policies for customer.
+2025-06-15 17:50:26.788 +05:30 [INF] Executed DbCommand (24ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PolicyId], [p].[AgentId], [p].[AvailablePolicyId], [p].[CreatedAt], [p].[CreatedBy], [p].[CustomerId], [p].[ExpiryDate], [p].[IssuedDate], [p].[UpdatedAt], [p].[UpdatedBy], [a].[AgentId], [a].[ContactInfo], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[UserId], [a0].[AvailablePolicyId], [a0].[BasePremium], [a0].[CoverageDetails], [a0].[CreatedAt], [a0].[CreatedBy], [a0].[Name], [a0].[UpdatedAt], [a0].[UpdatedBy], [a0].[ValidityPeriod]
+FROM [Policies] AS [p]
+INNER JOIN [Agents] AS [a] ON [p].[AgentId] = [a].[AgentId]
+INNER JOIN [AvailablePolicies] AS [a0] ON [p].[AvailablePolicyId] = [a0].[AvailablePolicyId]
+WHERE [p].[CustomerId] = @__customerId_0
+2025-06-15 17:50:26.793 +05:30 [INF] Successfully retrieved 9 registered policies for Customer ID 1.
+2025-06-15 17:50:26.795 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Collections.Generic.IEnumerable`1[[InsurenceManagementSystemWebApi.Applications.DTOs.CustomerPoliciesResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-15 17:50:26.796 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi) in 295.1069ms
+2025-06-15 17:50:26.799 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 17:50:26.803 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/policies - 200 null application/json; charset=utf-8 321.7207ms
+2025-06-15 18:03:49.779 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/policies - null null
+2025-06-15 18:03:49.783 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:03:49.786 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:03:49.788 +05:30 [INF] Route matched with {action = "GetRegisteredPolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRegisteredPolicies() on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:03:49.791 +05:30 [INF] Attempting to retrieve registered policies for customer.
+2025-06-15 18:03:50.188 +05:30 [INF] Executed DbCommand (35ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PolicyId], [p].[AgentId], [p].[AvailablePolicyId], [p].[CreatedAt], [p].[CreatedBy], [p].[CustomerId], [p].[ExpiryDate], [p].[IssuedDate], [p].[UpdatedAt], [p].[UpdatedBy], [a].[AgentId], [a].[ContactInfo], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[UserId], [a0].[AvailablePolicyId], [a0].[BasePremium], [a0].[CoverageDetails], [a0].[CreatedAt], [a0].[CreatedBy], [a0].[Name], [a0].[UpdatedAt], [a0].[UpdatedBy], [a0].[ValidityPeriod]
+FROM [Policies] AS [p]
+INNER JOIN [Agents] AS [a] ON [p].[AgentId] = [a].[AgentId]
+INNER JOIN [AvailablePolicies] AS [a0] ON [p].[AvailablePolicyId] = [a0].[AvailablePolicyId]
+WHERE [p].[CustomerId] = @__customerId_0
+2025-06-15 18:03:50.192 +05:30 [INF] Successfully retrieved 9 registered policies for Customer ID 1.
+2025-06-15 18:03:50.193 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Collections.Generic.IEnumerable`1[[InsurenceManagementSystemWebApi.Applications.DTOs.CustomerPoliciesResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-15 18:03:50.195 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi) in 404.3494ms
+2025-06-15 18:03:50.197 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:03:50.198 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/policies - 200 null application/json; charset=utf-8 419.5751ms
+2025-06-15 18:04:04.936 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - null null
+2025-06-15 18:04:04.948 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:04:04.951 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:04:04.956 +05:30 [INF] Route matched with {action = "GetAllAvailablePolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto]]] GetAllAvailablePolicies(Int32, Int32) on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:04:04.963 +05:30 [INF] Attempting to retrieve all available policies for customer. Page: 1, Size: 10
+2025-06-15 18:04:04.979 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[ValidityPeriod]
+FROM [AvailablePolicies] AS [a]
+2025-06-15 18:04:04.983 +05:30 [INF] Successfully retrieved 6 available policies for page 1.
+2025-06-15 18:04:04.986 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-15 18:04:04.989 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi) in 25.9778ms
+2025-06-15 18:04:04.994 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - null null
+2025-06-15 18:04:04.994 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:04:05.001 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:04:05.003 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - 200 null application/json; charset=utf-8 66.9471ms
+2025-06-15 18:04:05.005 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:04:05.011 +05:30 [INF] Route matched with {action = "GetAllAvailablePolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto]]] GetAllAvailablePolicies(Int32, Int32) on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:04:05.015 +05:30 [INF] Attempting to retrieve all available policies for customer. Page: 1, Size: 10
+2025-06-15 18:04:05.019 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[ValidityPeriod]
+FROM [AvailablePolicies] AS [a]
+2025-06-15 18:04:05.023 +05:30 [INF] Successfully retrieved 6 available policies for page 1.
+2025-06-15 18:04:05.024 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-15 18:04:05.026 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi) in 11.1472ms
+2025-06-15 18:04:05.028 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:04:05.029 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - 200 null application/json; charset=utf-8 35.6075ms
+2025-06-15 18:04:10.427 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=5 - null null
+2025-06-15 18:04:10.432 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:04:10.434 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:04:10.439 +05:30 [INF] Route matched with {action = "GetAllAvailablePolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto]]] GetAllAvailablePolicies(Int32, Int32) on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:04:10.446 +05:30 [INF] Attempting to retrieve all available policies for customer. Page: 1, Size: 5
+2025-06-15 18:04:10.450 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[ValidityPeriod]
+FROM [AvailablePolicies] AS [a]
+2025-06-15 18:04:10.455 +05:30 [INF] Successfully retrieved 5 available policies for page 1.
+2025-06-15 18:04:10.458 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-15 18:04:10.463 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi) in 17.5752ms
+2025-06-15 18:04:10.468 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:04:10.474 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=5 - 200 null application/json; charset=utf-8 47.377ms
+2025-06-15 18:04:17.538 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - null null
+2025-06-15 18:04:17.540 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:04:17.541 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:04:17.542 +05:30 [INF] Route matched with {action = "GetAllAvailablePolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto]]] GetAllAvailablePolicies(Int32, Int32) on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:04:17.544 +05:30 [INF] Attempting to retrieve all available policies for customer. Page: 1, Size: 10
+2025-06-15 18:04:17.547 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[ValidityPeriod]
+FROM [AvailablePolicies] AS [a]
+2025-06-15 18:04:17.554 +05:30 [INF] Successfully retrieved 6 available policies for page 1.
+2025-06-15 18:04:17.557 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-15 18:04:17.560 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi) in 16.2405ms
+2025-06-15 18:04:17.565 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:04:17.567 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - 200 null application/json; charset=utf-8 28.6077ms
+2025-06-15 18:04:25.162 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=15 - null null
+2025-06-15 18:04:25.164 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:04:25.165 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:04:25.166 +05:30 [INF] Route matched with {action = "GetAllAvailablePolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto]]] GetAllAvailablePolicies(Int32, Int32) on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:04:25.168 +05:30 [INF] Attempting to retrieve all available policies for customer. Page: 1, Size: 15
+2025-06-15 18:04:25.171 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[ValidityPeriod]
+FROM [AvailablePolicies] AS [a]
+2025-06-15 18:04:25.174 +05:30 [INF] Successfully retrieved 6 available policies for page 1.
+2025-06-15 18:04:25.176 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-15 18:04:25.179 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi) in 11.053ms
+2025-06-15 18:04:25.184 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:04:25.186 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=15 - 200 null application/json; charset=utf-8 23.9783ms
+2025-06-15 18:08:12.964 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - null null
+2025-06-15 18:08:12.971 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:08:12.973 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:08:12.975 +05:30 [INF] Route matched with {action = "GetAllAvailablePolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto]]] GetAllAvailablePolicies(Int32, Int32) on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:08:12.978 +05:30 [INF] Attempting to retrieve all available policies for customer. Page: 1, Size: 10
+2025-06-15 18:08:12.993 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[ValidityPeriod]
+FROM [AvailablePolicies] AS [a]
+2025-06-15 18:08:12.997 +05:30 [INF] Successfully retrieved 6 available policies for page 1.
+2025-06-15 18:08:12.999 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-15 18:08:13.003 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi) in 25.1523ms
+2025-06-15 18:08:13.006 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:08:13.007 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - 200 null application/json; charset=utf-8 43.3564ms
+2025-06-15 18:08:13.054 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - null null
+2025-06-15 18:08:13.062 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:08:13.065 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:08:13.067 +05:30 [INF] Route matched with {action = "GetAllAvailablePolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto]]] GetAllAvailablePolicies(Int32, Int32) on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:08:13.072 +05:30 [INF] Attempting to retrieve all available policies for customer. Page: 1, Size: 10
+2025-06-15 18:08:13.077 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[ValidityPeriod]
+FROM [AvailablePolicies] AS [a]
+2025-06-15 18:08:13.082 +05:30 [INF] Successfully retrieved 6 available policies for page 1.
+2025-06-15 18:08:13.085 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-15 18:08:13.088 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi) in 16.575ms
+2025-06-15 18:08:13.090 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:08:13.091 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - 200 null application/json; charset=utf-8 37.9268ms
+2025-06-15 18:08:20.629 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=5 - null null
+2025-06-15 18:08:20.632 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:08:20.634 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:08:20.637 +05:30 [INF] Route matched with {action = "GetAllAvailablePolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto]]] GetAllAvailablePolicies(Int32, Int32) on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:08:20.644 +05:30 [INF] Attempting to retrieve all available policies for customer. Page: 1, Size: 5
+2025-06-15 18:08:20.659 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[ValidityPeriod]
+FROM [AvailablePolicies] AS [a]
+2025-06-15 18:08:20.662 +05:30 [INF] Successfully retrieved 5 available policies for page 1.
+2025-06-15 18:08:20.664 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-15 18:08:20.667 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi) in 24.4266ms
+2025-06-15 18:08:20.674 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:08:20.675 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=5 - 200 null application/json; charset=utf-8 46.6163ms
+2025-06-15 18:08:34.381 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - null null
+2025-06-15 18:08:34.383 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:08:34.385 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:08:34.387 +05:30 [INF] Route matched with {action = "GetAllAvailablePolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto]]] GetAllAvailablePolicies(Int32, Int32) on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:08:34.390 +05:30 [INF] Attempting to retrieve all available policies for customer. Page: 1, Size: 10
+2025-06-15 18:08:34.402 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[ValidityPeriod]
+FROM [AvailablePolicies] AS [a]
+2025-06-15 18:08:34.405 +05:30 [INF] Successfully retrieved 6 available policies for page 1.
+2025-06-15 18:08:34.407 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-15 18:08:34.411 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi) in 21.4209ms
+2025-06-15 18:08:34.413 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:08:34.414 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - 200 null application/json; charset=utf-8 33.8229ms
+2025-06-15 18:10:34.635 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=5 - null null
+2025-06-15 18:10:34.648 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:10:34.650 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:10:34.652 +05:30 [INF] Route matched with {action = "GetAllAvailablePolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto]]] GetAllAvailablePolicies(Int32, Int32) on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:10:34.656 +05:30 [INF] Attempting to retrieve all available policies for customer. Page: 1, Size: 5
+2025-06-15 18:10:34.675 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[ValidityPeriod]
+FROM [AvailablePolicies] AS [a]
+2025-06-15 18:10:34.679 +05:30 [INF] Successfully retrieved 5 available policies for page 1.
+2025-06-15 18:10:34.680 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-15 18:10:34.681 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi) in 25.7399ms
+2025-06-15 18:10:34.683 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:10:34.683 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=5 - 200 null application/json; charset=utf-8 49.2491ms
+2025-06-15 18:10:47.554 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - null null
+2025-06-15 18:10:47.557 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:10:47.558 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:10:47.559 +05:30 [INF] Route matched with {action = "GetAllAvailablePolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto]]] GetAllAvailablePolicies(Int32, Int32) on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:10:47.561 +05:30 [INF] Attempting to retrieve all available policies for customer. Page: 1, Size: 10
+2025-06-15 18:10:47.573 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[ValidityPeriod]
+FROM [AvailablePolicies] AS [a]
+2025-06-15 18:10:47.576 +05:30 [INF] Successfully retrieved 6 available policies for page 1.
+2025-06-15 18:10:47.577 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-15 18:10:47.583 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi) in 22.5394ms
+2025-06-15 18:10:47.587 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:10:47.589 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - 200 null application/json; charset=utf-8 34.7318ms
+2025-06-15 18:11:20.027 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - null null
+2025-06-15 18:11:20.031 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:11:20.033 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:11:20.034 +05:30 [INF] Route matched with {action = "GetAllAvailablePolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto]]] GetAllAvailablePolicies(Int32, Int32) on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:11:20.038 +05:30 [INF] Attempting to retrieve all available policies for customer. Page: 1, Size: 10
+2025-06-15 18:11:20.041 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[ValidityPeriod]
+FROM [AvailablePolicies] AS [a]
+2025-06-15 18:11:20.045 +05:30 [INF] Successfully retrieved 6 available policies for page 1.
+2025-06-15 18:11:20.047 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-15 18:11:20.048 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi) in 11.059ms
+2025-06-15 18:11:20.051 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:11:20.053 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - 200 null application/json; charset=utf-8 25.83ms
+2025-06-15 18:11:20.110 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - null null
+2025-06-15 18:11:20.115 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:11:20.116 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:11:20.119 +05:30 [INF] Route matched with {action = "GetAllAvailablePolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto]]] GetAllAvailablePolicies(Int32, Int32) on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:11:20.121 +05:30 [INF] Attempting to retrieve all available policies for customer. Page: 1, Size: 10
+2025-06-15 18:11:20.125 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[ValidityPeriod]
+FROM [AvailablePolicies] AS [a]
+2025-06-15 18:11:20.127 +05:30 [INF] Successfully retrieved 6 available policies for page 1.
+2025-06-15 18:11:20.128 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-15 18:11:20.130 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi) in 8.6241ms
+2025-06-15 18:11:20.131 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:11:20.132 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - 200 null application/json; charset=utf-8 21.487ms
+2025-06-15 18:11:38.730 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - null null
+2025-06-15 18:11:38.741 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:11:38.744 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi)'
+2025-06-15 18:11:38.747 +05:30 [INF] Route matched with {action = "GetPolicyRequests", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPolicyRequests() on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:11:38.755 +05:30 [INF] Attempting to retrieve policy requests for customer.
+2025-06-15 18:11:38.769 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[RequestId], [p].[AvailablePolicyId], [p].[CreatedAt], [p].[CreatedBy], [p].[CustomerId], [p].[RequestedOn], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [PolicyRequests] AS [p]
+WHERE [p].[CustomerId] = @__customerId_0
+2025-06-15 18:11:38.771 +05:30 [INF] Successfully retrieved 10 policy requests for Customer ID 1.
+2025-06-15 18:11:38.773 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Collections.Generic.IEnumerable`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PolicyRequestStatusResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-15 18:11:38.774 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi) in 19.5423ms
+2025-06-15 18:11:38.777 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi)'
+2025-06-15 18:11:38.779 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - 200 null application/json; charset=utf-8 50.8151ms
+2025-06-15 18:11:53.381 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/claims - null null
+2025-06-15 18:11:53.384 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:11:53.387 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetMyClaims (InsurenceManagementSystemWebApi)'
+2025-06-15 18:11:53.395 +05:30 [INF] Route matched with {action = "GetMyClaims", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMyClaims() on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:11:53.398 +05:30 [INF] Attempting to retrieve claims for customer.
+2025-06-15 18:11:53.436 +05:30 [INF] Executed DbCommand (24ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[ClaimId], [c].[AgentId], [c].[ClaimAmount], [c].[CreatedAt], [c].[CreatedBy], [c].[CustomerId], [c].[FiledDate], [c].[PolicyId], [c].[Status], [c].[UpdatedAt], [c].[UpdatedBy], [p].[PolicyId], [p].[AgentId], [p].[AvailablePolicyId], [p].[CreatedAt], [p].[CreatedBy], [p].[CustomerId], [p].[ExpiryDate], [p].[IssuedDate], [p].[UpdatedAt], [p].[UpdatedBy], [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[ValidityPeriod]
+FROM [Claims] AS [c]
+INNER JOIN [Policies] AS [p] ON [c].[PolicyId] = [p].[PolicyId]
+INNER JOIN [AvailablePolicies] AS [a] ON [p].[AvailablePolicyId] = [a].[AvailablePolicyId]
+WHERE [c].[CustomerId] = @__customerId_0
+2025-06-15 18:11:53.458 +05:30 [INF] Successfully retrieved 10 claims for Customer ID 1.
+2025-06-15 18:11:53.459 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Collections.Generic.IEnumerable`1[[InsurenceManagementSystemWebApi.Applications.DTOs.ClaimStatusResponseDtoForCustomer, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-15 18:11:53.463 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetMyClaims (InsurenceManagementSystemWebApi) in 66.6038ms
+2025-06-15 18:11:53.465 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetMyClaims (InsurenceManagementSystemWebApi)'
+2025-06-15 18:11:53.476 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/claims - 200 null application/json; charset=utf-8 96.059ms
+2025-06-15 18:12:11.301 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/policies - null null
+2025-06-15 18:12:11.305 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:12:11.306 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:12:11.307 +05:30 [INF] Route matched with {action = "GetRegisteredPolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRegisteredPolicies() on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:12:11.308 +05:30 [INF] Attempting to retrieve registered policies for customer.
+2025-06-15 18:12:11.368 +05:30 [INF] Executed DbCommand (59ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PolicyId], [p].[AgentId], [p].[AvailablePolicyId], [p].[CreatedAt], [p].[CreatedBy], [p].[CustomerId], [p].[ExpiryDate], [p].[IssuedDate], [p].[UpdatedAt], [p].[UpdatedBy], [a].[AgentId], [a].[ContactInfo], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[UserId], [a0].[AvailablePolicyId], [a0].[BasePremium], [a0].[CoverageDetails], [a0].[CreatedAt], [a0].[CreatedBy], [a0].[Name], [a0].[UpdatedAt], [a0].[UpdatedBy], [a0].[ValidityPeriod]
+FROM [Policies] AS [p]
+INNER JOIN [Agents] AS [a] ON [p].[AgentId] = [a].[AgentId]
+INNER JOIN [AvailablePolicies] AS [a0] ON [p].[AvailablePolicyId] = [a0].[AvailablePolicyId]
+WHERE [p].[CustomerId] = @__customerId_0
+2025-06-15 18:12:11.370 +05:30 [INF] Successfully retrieved 9 registered policies for Customer ID 1.
+2025-06-15 18:12:11.371 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Collections.Generic.IEnumerable`1[[InsurenceManagementSystemWebApi.Applications.DTOs.CustomerPoliciesResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-15 18:12:11.373 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi) in 64.833ms
+2025-06-15 18:12:11.374 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:12:11.375 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/policies - 200 null application/json; charset=utf-8 73.7201ms
+2025-06-15 18:12:14.360 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - null null
+2025-06-15 18:12:14.361 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:12:14.362 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:12:14.364 +05:30 [INF] Route matched with {action = "GetAllAvailablePolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto]]] GetAllAvailablePolicies(Int32, Int32) on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:12:14.367 +05:30 [INF] Attempting to retrieve all available policies for customer. Page: 1, Size: 10
+2025-06-15 18:12:14.372 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[ValidityPeriod]
+FROM [AvailablePolicies] AS [a]
+2025-06-15 18:12:14.375 +05:30 [INF] Successfully retrieved 6 available policies for page 1.
+2025-06-15 18:12:14.376 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-15 18:12:14.378 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi) in 11.1768ms
+2025-06-15 18:12:14.380 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:12:14.380 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - null null
+2025-06-15 18:12:14.384 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:12:14.381 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - 200 null application/json; charset=utf-8 30.1989ms
+2025-06-15 18:12:14.387 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:12:14.391 +05:30 [INF] Route matched with {action = "GetAllAvailablePolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto]]] GetAllAvailablePolicies(Int32, Int32) on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:12:14.394 +05:30 [INF] Attempting to retrieve all available policies for customer. Page: 1, Size: 10
+2025-06-15 18:12:14.398 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[ValidityPeriod]
+FROM [AvailablePolicies] AS [a]
+2025-06-15 18:12:14.400 +05:30 [INF] Successfully retrieved 6 available policies for page 1.
+2025-06-15 18:12:14.402 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-15 18:12:14.404 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi) in 10.3179ms
+2025-06-15 18:12:14.405 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:12:14.407 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - 200 null application/json; charset=utf-8 27.0968ms
+2025-06-15 18:12:15.510 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - null null
+2025-06-15 18:12:15.524 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:12:15.524 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi)'
+2025-06-15 18:12:15.526 +05:30 [INF] Route matched with {action = "GetPolicyRequests", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPolicyRequests() on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:12:15.528 +05:30 [INF] Attempting to retrieve policy requests for customer.
+2025-06-15 18:12:15.537 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[RequestId], [p].[AvailablePolicyId], [p].[CreatedAt], [p].[CreatedBy], [p].[CustomerId], [p].[RequestedOn], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [PolicyRequests] AS [p]
+WHERE [p].[CustomerId] = @__customerId_0
+2025-06-15 18:12:15.540 +05:30 [INF] Successfully retrieved 10 policy requests for Customer ID 1.
+2025-06-15 18:12:15.542 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Collections.Generic.IEnumerable`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PolicyRequestStatusResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-15 18:12:15.544 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi) in 16.6522ms
+2025-06-15 18:12:15.547 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi)'
+2025-06-15 18:12:15.548 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - 200 null application/json; charset=utf-8 38.0658ms
+2025-06-15 18:14:18.890 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - null null
+2025-06-15 18:14:18.905 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:14:18.908 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:14:18.911 +05:30 [INF] Route matched with {action = "GetAllAvailablePolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto]]] GetAllAvailablePolicies(Int32, Int32) on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:14:18.914 +05:30 [INF] Attempting to retrieve all available policies for customer. Page: 1, Size: 10
+2025-06-15 18:14:18.927 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[ValidityPeriod]
+FROM [AvailablePolicies] AS [a]
+2025-06-15 18:14:18.931 +05:30 [INF] Successfully retrieved 6 available policies for page 1.
+2025-06-15 18:14:18.934 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-15 18:14:18.936 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi) in 22.5633ms
+2025-06-15 18:14:18.939 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - null null
+2025-06-15 18:14:18.939 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:14:18.946 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:14:18.948 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - 200 null application/json; charset=utf-8 57.9697ms
+2025-06-15 18:14:18.949 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:14:18.953 +05:30 [INF] Route matched with {action = "GetAllAvailablePolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto]]] GetAllAvailablePolicies(Int32, Int32) on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:14:18.956 +05:30 [INF] Attempting to retrieve all available policies for customer. Page: 1, Size: 10
+2025-06-15 18:14:18.960 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[ValidityPeriod]
+FROM [AvailablePolicies] AS [a]
+2025-06-15 18:14:18.962 +05:30 [INF] Successfully retrieved 6 available policies for page 1.
+2025-06-15 18:14:18.964 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-15 18:14:18.965 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi) in 9.8899ms
+2025-06-15 18:14:18.967 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:14:18.968 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - 200 null application/json; charset=utf-8 29.8025ms
+2025-06-15 18:14:23.803 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/claims - null null
+2025-06-15 18:14:23.810 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:14:23.812 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetMyClaims (InsurenceManagementSystemWebApi)'
+2025-06-15 18:14:23.816 +05:30 [INF] Route matched with {action = "GetMyClaims", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMyClaims() on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:14:23.822 +05:30 [INF] Attempting to retrieve claims for customer.
+2025-06-15 18:14:23.833 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[ClaimId], [c].[AgentId], [c].[ClaimAmount], [c].[CreatedAt], [c].[CreatedBy], [c].[CustomerId], [c].[FiledDate], [c].[PolicyId], [c].[Status], [c].[UpdatedAt], [c].[UpdatedBy], [p].[PolicyId], [p].[AgentId], [p].[AvailablePolicyId], [p].[CreatedAt], [p].[CreatedBy], [p].[CustomerId], [p].[ExpiryDate], [p].[IssuedDate], [p].[UpdatedAt], [p].[UpdatedBy], [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[ValidityPeriod]
+FROM [Claims] AS [c]
+INNER JOIN [Policies] AS [p] ON [c].[PolicyId] = [p].[PolicyId]
+INNER JOIN [AvailablePolicies] AS [a] ON [p].[AvailablePolicyId] = [a].[AvailablePolicyId]
+WHERE [c].[CustomerId] = @__customerId_0
+2025-06-15 18:14:23.837 +05:30 [INF] Successfully retrieved 10 claims for Customer ID 1.
+2025-06-15 18:14:23.839 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Collections.Generic.IEnumerable`1[[InsurenceManagementSystemWebApi.Applications.DTOs.ClaimStatusResponseDtoForCustomer, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-15 18:14:23.840 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetMyClaims (InsurenceManagementSystemWebApi) in 18.461ms
+2025-06-15 18:14:23.843 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetMyClaims (InsurenceManagementSystemWebApi)'
+2025-06-15 18:14:23.846 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/claims - 200 null application/json; charset=utf-8 43.7825ms
+2025-06-15 18:14:26.021 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/policies - null null
+2025-06-15 18:14:26.027 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:14:26.029 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:14:26.034 +05:30 [INF] Route matched with {action = "GetRegisteredPolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRegisteredPolicies() on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:14:26.037 +05:30 [INF] Attempting to retrieve registered policies for customer.
+2025-06-15 18:14:26.052 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PolicyId], [p].[AgentId], [p].[AvailablePolicyId], [p].[CreatedAt], [p].[CreatedBy], [p].[CustomerId], [p].[ExpiryDate], [p].[IssuedDate], [p].[UpdatedAt], [p].[UpdatedBy], [a].[AgentId], [a].[ContactInfo], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[UserId], [a0].[AvailablePolicyId], [a0].[BasePremium], [a0].[CoverageDetails], [a0].[CreatedAt], [a0].[CreatedBy], [a0].[Name], [a0].[UpdatedAt], [a0].[UpdatedBy], [a0].[ValidityPeriod]
+FROM [Policies] AS [p]
+INNER JOIN [Agents] AS [a] ON [p].[AgentId] = [a].[AgentId]
+INNER JOIN [AvailablePolicies] AS [a0] ON [p].[AvailablePolicyId] = [a0].[AvailablePolicyId]
+WHERE [p].[CustomerId] = @__customerId_0
+2025-06-15 18:14:26.058 +05:30 [INF] Successfully retrieved 9 registered policies for Customer ID 1.
+2025-06-15 18:14:26.059 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Collections.Generic.IEnumerable`1[[InsurenceManagementSystemWebApi.Applications.DTOs.CustomerPoliciesResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-15 18:14:26.062 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi) in 25.7223ms
+2025-06-15 18:14:26.066 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:14:26.067 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/policies - 200 null application/json; charset=utf-8 46.4197ms
+2025-06-15 18:14:36.689 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - null null
+2025-06-15 18:14:36.699 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:14:36.700 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi)'
+2025-06-15 18:14:36.706 +05:30 [INF] Route matched with {action = "GetPolicyRequests", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPolicyRequests() on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:14:36.709 +05:30 [INF] Attempting to retrieve policy requests for customer.
+2025-06-15 18:14:36.716 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[RequestId], [p].[AvailablePolicyId], [p].[CreatedAt], [p].[CreatedBy], [p].[CustomerId], [p].[RequestedOn], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [PolicyRequests] AS [p]
+WHERE [p].[CustomerId] = @__customerId_0
+2025-06-15 18:14:36.723 +05:30 [INF] Successfully retrieved 10 policy requests for Customer ID 1.
+2025-06-15 18:14:36.725 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Collections.Generic.IEnumerable`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PolicyRequestStatusResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-15 18:14:36.727 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi) in 18.6878ms
+2025-06-15 18:14:36.729 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi)'
+2025-06-15 18:14:36.731 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - 200 null application/json; charset=utf-8 43.978ms
+2025-06-15 18:15:33.393 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - null null
+2025-06-15 18:15:33.396 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:15:33.398 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi)'
+2025-06-15 18:15:33.400 +05:30 [INF] Route matched with {action = "GetPolicyRequests", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPolicyRequests() on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:15:33.403 +05:30 [INF] Attempting to retrieve policy requests for customer.
+2025-06-15 18:15:33.418 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[RequestId], [p].[AvailablePolicyId], [p].[CreatedAt], [p].[CreatedBy], [p].[CustomerId], [p].[RequestedOn], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [PolicyRequests] AS [p]
+WHERE [p].[CustomerId] = @__customerId_0
+2025-06-15 18:15:33.423 +05:30 [INF] Successfully retrieved 10 policy requests for Customer ID 1.
+2025-06-15 18:15:33.425 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Collections.Generic.IEnumerable`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PolicyRequestStatusResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-15 18:15:33.428 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi) in 25.2548ms
+2025-06-15 18:15:33.430 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi)'
+2025-06-15 18:15:33.432 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - 200 null application/json; charset=utf-8 38.9245ms
+2025-06-15 18:23:08.932 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - null null
+2025-06-15 18:23:08.936 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:23:08.938 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Customer)
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Customer)
+2025-06-15 18:23:08.944 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-06-15 18:23:08.945 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - 401 0 null 12.9383ms
+2025-06-15 18:23:37.809 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - null null
+2025-06-15 18:23:37.815 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:23:37.816 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Customer)
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Customer)
+2025-06-15 18:23:37.817 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-06-15 18:23:37.818 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - 401 0 null 9.0406ms
+2025-06-15 18:23:51.671 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - null null
+2025-06-15 18:23:51.674 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:23:51.676 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Customer)
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Customer)
+2025-06-15 18:23:51.677 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-06-15 18:23:51.678 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - 401 0 null 6.6125ms
+2025-06-15 18:23:57.634 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - null null
+2025-06-15 18:23:57.637 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:23:57.638 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Customer)
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Customer)
+2025-06-15 18:23:57.640 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-06-15 18:23:57.641 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - 401 0 null 7.9377ms
+2025-06-15 18:25:00.149 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - null null
+2025-06-15 18:25:00.151 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:25:00.152 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Customer)
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Customer)
+2025-06-15 18:25:00.154 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-06-15 18:25:00.155 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - 401 0 null 5.6418ms
+2025-06-15 18:25:09.143 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - null null
+2025-06-15 18:25:09.147 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:25:09.148 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Customer)
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Customer)
+2025-06-15 18:25:09.149 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-06-15 18:25:09.151 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - 401 0 null 8.1581ms
+2025-06-15 18:25:43.279 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - null null
+2025-06-15 18:25:43.287 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:25:43.290 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Customer)
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Customer)
+2025-06-15 18:25:43.291 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-06-15 18:25:43.294 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - 401 0 null 16.2793ms
+2025-06-15 18:26:17.086 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7153/api/Auth/login - null null
+2025-06-15 18:26:17.094 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:26:17.095 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7153/api/Auth/login - 204 null null 8.8829ms
+2025-06-15 18:26:17.096 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7153/api/Auth/login - application/json 51
+2025-06-15 18:26:17.104 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:26:17.104 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.AuthController.Login (InsurenceManagementSystemWebApi)'
+2025-06-15 18:26:17.105 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(InsurenceManagementSystemWebApi.Applications.DTOs.LoginRequestDto) on controller InsurenceManagementSystemWebApi.Controllers.AuthController (InsurenceManagementSystemWebApi).
+2025-06-15 18:26:17.109 +05:30 [INF] Attempting login for username: Rathna_2004
+2025-06-15 18:26:17.413 +05:30 [INF] Executed DbCommand (27ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[IsDeleted], [u].[PasswordHash], [u].[UpdatedAt], [u].[UpdatedBy], [u].[Username], [u0].[UserId], [u0].[RoleId], [u0].[CreatedAt], [u0].[CreatedBy], [u0].[UpdatedAt], [u0].[UpdatedBy], [r].[Id], [r].[Name]
+FROM [Users] AS [u]
+LEFT JOIN [UserRoles] AS [u0] ON [u].[Id] = [u0].[UserId]
+LEFT JOIN [Roles] AS [r] ON [u0].[RoleId] = [r].[Id]
+WHERE [u].[Username] = @__username_0
+2025-06-15 18:26:17.527 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[CustomerId], [c].[Address], [c].[CreatedAt], [c].[CreatedBy], [c].[DateOfBirth], [c].[Email], [c].[Name], [c].[Phone], [c].[UpdatedAt], [c].[UpdatedBy], [c].[UserId]
+FROM [Customers] AS [c]
+WHERE [c].[UserId] = @__userId_0
+2025-06-15 18:26:17.530 +05:30 [INF] User 'Rathna_2004' (User ID: "8f359361-c940-4177-83e0-b8ef6162cb3d", Role: Customer) logged in successfully.
+2025-06-15 18:26:17.531 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.LoginResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-15 18:26:17.532 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.AuthController.Login (InsurenceManagementSystemWebApi) in 426.021ms
+2025-06-15 18:26:17.534 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.AuthController.Login (InsurenceManagementSystemWebApi)'
+2025-06-15 18:26:17.535 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7153/api/Auth/login - 200 null application/json; charset=utf-8 438.7754ms
+2025-06-15 18:26:19.056 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - null null
+2025-06-15 18:26:19.063 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:26:19.067 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi)'
+2025-06-15 18:26:19.069 +05:30 [INF] Route matched with {action = "GetPolicyRequests", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPolicyRequests() on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:26:19.071 +05:30 [INF] Attempting to retrieve policy requests for customer.
+2025-06-15 18:26:19.079 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[RequestId], [p].[AvailablePolicyId], [p].[CreatedAt], [p].[CreatedBy], [p].[CustomerId], [p].[RequestedOn], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [PolicyRequests] AS [p]
+WHERE [p].[CustomerId] = @__customerId_0
+2025-06-15 18:26:19.083 +05:30 [INF] Successfully retrieved 10 policy requests for Customer ID 1.
+2025-06-15 18:26:19.084 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Collections.Generic.IEnumerable`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PolicyRequestStatusResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-15 18:26:19.086 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi) in 15.2298ms
+2025-06-15 18:26:19.088 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi)'
+2025-06-15 18:26:19.089 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - 200 null application/json; charset=utf-8 33.717ms
+2025-06-15 18:28:09.160 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - null null
+2025-06-15 18:28:09.163 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:28:09.164 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi)'
+2025-06-15 18:28:09.165 +05:30 [INF] Route matched with {action = "GetPolicyRequests", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPolicyRequests() on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:28:09.167 +05:30 [INF] Attempting to retrieve policy requests for customer.
+2025-06-15 18:28:09.183 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[RequestId], [p].[AvailablePolicyId], [p].[CreatedAt], [p].[CreatedBy], [p].[CustomerId], [p].[RequestedOn], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [PolicyRequests] AS [p]
+WHERE [p].[CustomerId] = @__customerId_0
+2025-06-15 18:28:09.190 +05:30 [INF] Successfully retrieved 10 policy requests for Customer ID 1.
+2025-06-15 18:28:09.192 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Collections.Generic.IEnumerable`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PolicyRequestStatusResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-15 18:28:09.194 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi) in 26.825ms
+2025-06-15 18:28:09.196 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi)'
+2025-06-15 18:28:09.197 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - 200 null application/json; charset=utf-8 36.902ms
+2025-06-15 18:31:39.765 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - null null
+2025-06-15 18:31:39.773 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:31:39.782 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi)'
+2025-06-15 18:31:39.803 +05:30 [INF] Route matched with {action = "GetPolicyRequests", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPolicyRequests() on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:31:39.821 +05:30 [INF] Attempting to retrieve policy requests for customer.
+2025-06-15 18:31:40.110 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[RequestId], [p].[AvailablePolicyId], [p].[CreatedAt], [p].[CreatedBy], [p].[CustomerId], [p].[RequestedOn], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [PolicyRequests] AS [p]
+WHERE [p].[CustomerId] = @__customerId_0
+2025-06-15 18:31:40.117 +05:30 [INF] Successfully retrieved 10 policy requests for Customer ID 1.
+2025-06-15 18:31:40.120 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Collections.Generic.IEnumerable`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PolicyRequestStatusResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-15 18:31:40.121 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi) in 300.0368ms
+2025-06-15 18:31:40.122 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi)'
+2025-06-15 18:31:40.126 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - 200 null application/json; charset=utf-8 361.5236ms
+2025-06-15 18:31:53.838 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - null null
+2025-06-15 18:31:53.840 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:31:53.841 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi)'
+2025-06-15 18:31:53.842 +05:30 [INF] Route matched with {action = "GetPolicyRequests", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPolicyRequests() on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:31:53.843 +05:30 [INF] Attempting to retrieve policy requests for customer.
+2025-06-15 18:31:53.848 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[RequestId], [p].[AvailablePolicyId], [p].[CreatedAt], [p].[CreatedBy], [p].[CustomerId], [p].[RequestedOn], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [PolicyRequests] AS [p]
+WHERE [p].[CustomerId] = @__customerId_0
+2025-06-15 18:31:53.850 +05:30 [INF] Successfully retrieved 10 policy requests for Customer ID 1.
+2025-06-15 18:31:53.851 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Collections.Generic.IEnumerable`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PolicyRequestStatusResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-15 18:31:53.852 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi) in 9.478ms
+2025-06-15 18:31:53.854 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi)'
+2025-06-15 18:31:53.855 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - 200 null application/json; charset=utf-8 17.2191ms
+2025-06-15 18:32:26.792 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - null null
+2025-06-15 18:32:26.795 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:32:26.799 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi)'
+2025-06-15 18:32:26.802 +05:30 [INF] Route matched with {action = "GetPolicyRequests", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPolicyRequests() on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:32:26.806 +05:30 [INF] Attempting to retrieve policy requests for customer.
+2025-06-15 18:32:26.810 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[RequestId], [p].[AvailablePolicyId], [p].[CreatedAt], [p].[CreatedBy], [p].[CustomerId], [p].[RequestedOn], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [PolicyRequests] AS [p]
+WHERE [p].[CustomerId] = @__customerId_0
+2025-06-15 18:32:26.815 +05:30 [INF] Successfully retrieved 10 policy requests for Customer ID 1.
+2025-06-15 18:32:26.818 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Collections.Generic.IEnumerable`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PolicyRequestStatusResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-15 18:32:26.820 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi) in 14.7933ms
+2025-06-15 18:32:26.823 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi)'
+2025-06-15 18:32:26.824 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - 200 null application/json; charset=utf-8 32.1651ms
+2025-06-15 18:32:34.640 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/policies - null null
+2025-06-15 18:32:34.649 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:32:34.652 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:32:34.654 +05:30 [INF] Route matched with {action = "GetRegisteredPolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRegisteredPolicies() on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:32:34.659 +05:30 [INF] Attempting to retrieve registered policies for customer.
+2025-06-15 18:32:34.680 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PolicyId], [p].[AgentId], [p].[AvailablePolicyId], [p].[CreatedAt], [p].[CreatedBy], [p].[CustomerId], [p].[ExpiryDate], [p].[IssuedDate], [p].[UpdatedAt], [p].[UpdatedBy], [a].[AgentId], [a].[ContactInfo], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[UserId], [a0].[AvailablePolicyId], [a0].[BasePremium], [a0].[CoverageDetails], [a0].[CreatedAt], [a0].[CreatedBy], [a0].[Name], [a0].[UpdatedAt], [a0].[UpdatedBy], [a0].[ValidityPeriod]
+FROM [Policies] AS [p]
+INNER JOIN [Agents] AS [a] ON [p].[AgentId] = [a].[AgentId]
+INNER JOIN [AvailablePolicies] AS [a0] ON [p].[AvailablePolicyId] = [a0].[AvailablePolicyId]
+WHERE [p].[CustomerId] = @__customerId_0
+2025-06-15 18:32:34.686 +05:30 [INF] Successfully retrieved 9 registered policies for Customer ID 1.
+2025-06-15 18:32:34.691 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Collections.Generic.IEnumerable`1[[InsurenceManagementSystemWebApi.Applications.DTOs.CustomerPoliciesResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-15 18:32:34.693 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi) in 34.9761ms
+2025-06-15 18:32:34.695 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:32:34.696 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/policies - 200 null application/json; charset=utf-8 56.4065ms
+2025-06-15 18:32:39.290 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/claims - null null
+2025-06-15 18:32:39.295 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:32:39.298 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetMyClaims (InsurenceManagementSystemWebApi)'
+2025-06-15 18:32:39.301 +05:30 [INF] Route matched with {action = "GetMyClaims", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMyClaims() on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:32:39.303 +05:30 [INF] Attempting to retrieve claims for customer.
+2025-06-15 18:32:39.330 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[ClaimId], [c].[AgentId], [c].[ClaimAmount], [c].[CreatedAt], [c].[CreatedBy], [c].[CustomerId], [c].[FiledDate], [c].[PolicyId], [c].[Status], [c].[UpdatedAt], [c].[UpdatedBy], [p].[PolicyId], [p].[AgentId], [p].[AvailablePolicyId], [p].[CreatedAt], [p].[CreatedBy], [p].[CustomerId], [p].[ExpiryDate], [p].[IssuedDate], [p].[UpdatedAt], [p].[UpdatedBy], [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[ValidityPeriod]
+FROM [Claims] AS [c]
+INNER JOIN [Policies] AS [p] ON [c].[PolicyId] = [p].[PolicyId]
+INNER JOIN [AvailablePolicies] AS [a] ON [p].[AvailablePolicyId] = [a].[AvailablePolicyId]
+WHERE [c].[CustomerId] = @__customerId_0
+2025-06-15 18:32:39.332 +05:30 [INF] Successfully retrieved 10 claims for Customer ID 1.
+2025-06-15 18:32:39.333 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Collections.Generic.IEnumerable`1[[InsurenceManagementSystemWebApi.Applications.DTOs.ClaimStatusResponseDtoForCustomer, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-15 18:32:39.335 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetMyClaims (InsurenceManagementSystemWebApi) in 31.2647ms
+2025-06-15 18:32:39.336 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetMyClaims (InsurenceManagementSystemWebApi)'
+2025-06-15 18:32:39.337 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/claims - 200 null application/json; charset=utf-8 47.8889ms
+2025-06-15 18:32:42.611 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/policies - null null
+2025-06-15 18:32:42.627 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:32:42.631 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:32:42.633 +05:30 [INF] Route matched with {action = "GetRegisteredPolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRegisteredPolicies() on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:32:42.635 +05:30 [INF] Attempting to retrieve registered policies for customer.
+2025-06-15 18:32:42.660 +05:30 [INF] Executed DbCommand (24ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PolicyId], [p].[AgentId], [p].[AvailablePolicyId], [p].[CreatedAt], [p].[CreatedBy], [p].[CustomerId], [p].[ExpiryDate], [p].[IssuedDate], [p].[UpdatedAt], [p].[UpdatedBy], [a].[AgentId], [a].[ContactInfo], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[UserId], [a0].[AvailablePolicyId], [a0].[BasePremium], [a0].[CoverageDetails], [a0].[CreatedAt], [a0].[CreatedBy], [a0].[Name], [a0].[UpdatedAt], [a0].[UpdatedBy], [a0].[ValidityPeriod]
+FROM [Policies] AS [p]
+INNER JOIN [Agents] AS [a] ON [p].[AgentId] = [a].[AgentId]
+INNER JOIN [AvailablePolicies] AS [a0] ON [p].[AvailablePolicyId] = [a0].[AvailablePolicyId]
+WHERE [p].[CustomerId] = @__customerId_0
+2025-06-15 18:32:42.663 +05:30 [INF] Successfully retrieved 9 registered policies for Customer ID 1.
+2025-06-15 18:32:42.664 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Collections.Generic.IEnumerable`1[[InsurenceManagementSystemWebApi.Applications.DTOs.CustomerPoliciesResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-15 18:32:42.665 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi) in 30.8291ms
+2025-06-15 18:32:42.667 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:32:42.668 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/policies - 200 null application/json; charset=utf-8 57.1959ms
+2025-06-15 18:32:46.278 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - null null
+2025-06-15 18:32:46.283 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:32:46.285 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi)'
+2025-06-15 18:32:46.287 +05:30 [INF] Route matched with {action = "GetPolicyRequests", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPolicyRequests() on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:32:46.291 +05:30 [INF] Attempting to retrieve policy requests for customer.
+2025-06-15 18:32:46.301 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[RequestId], [p].[AvailablePolicyId], [p].[CreatedAt], [p].[CreatedBy], [p].[CustomerId], [p].[RequestedOn], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [PolicyRequests] AS [p]
+WHERE [p].[CustomerId] = @__customerId_0
+2025-06-15 18:32:46.304 +05:30 [INF] Successfully retrieved 10 policy requests for Customer ID 1.
+2025-06-15 18:32:46.305 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Collections.Generic.IEnumerable`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PolicyRequestStatusResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-15 18:32:46.308 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi) in 17.2097ms
+2025-06-15 18:32:46.309 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi)'
+2025-06-15 18:32:46.310 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - 200 null application/json; charset=utf-8 31.894ms
+2025-06-15 18:33:05.663 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/policies - null null
+2025-06-15 18:33:05.664 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:33:05.667 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:33:05.670 +05:30 [INF] Route matched with {action = "GetRegisteredPolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRegisteredPolicies() on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:33:05.678 +05:30 [INF] Attempting to retrieve registered policies for customer.
+2025-06-15 18:33:05.688 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PolicyId], [p].[AgentId], [p].[AvailablePolicyId], [p].[CreatedAt], [p].[CreatedBy], [p].[CustomerId], [p].[ExpiryDate], [p].[IssuedDate], [p].[UpdatedAt], [p].[UpdatedBy], [a].[AgentId], [a].[ContactInfo], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[UserId], [a0].[AvailablePolicyId], [a0].[BasePremium], [a0].[CoverageDetails], [a0].[CreatedAt], [a0].[CreatedBy], [a0].[Name], [a0].[UpdatedAt], [a0].[UpdatedBy], [a0].[ValidityPeriod]
+FROM [Policies] AS [p]
+INNER JOIN [Agents] AS [a] ON [p].[AgentId] = [a].[AgentId]
+INNER JOIN [AvailablePolicies] AS [a0] ON [p].[AvailablePolicyId] = [a0].[AvailablePolicyId]
+WHERE [p].[CustomerId] = @__customerId_0
+2025-06-15 18:33:05.696 +05:30 [INF] Successfully retrieved 9 registered policies for Customer ID 1.
+2025-06-15 18:33:05.697 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Collections.Generic.IEnumerable`1[[InsurenceManagementSystemWebApi.Applications.DTOs.CustomerPoliciesResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-15 18:33:05.698 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi) in 20.6287ms
+2025-06-15 18:33:05.702 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:33:05.703 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/policies - 200 null application/json; charset=utf-8 40.6835ms
+2025-06-15 18:33:29.246 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/policies - null null
+2025-06-15 18:33:29.260 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:33:29.261 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:33:29.262 +05:30 [INF] Route matched with {action = "GetRegisteredPolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRegisteredPolicies() on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:33:29.265 +05:30 [INF] Attempting to retrieve registered policies for customer.
+2025-06-15 18:33:29.272 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PolicyId], [p].[AgentId], [p].[AvailablePolicyId], [p].[CreatedAt], [p].[CreatedBy], [p].[CustomerId], [p].[ExpiryDate], [p].[IssuedDate], [p].[UpdatedAt], [p].[UpdatedBy], [a].[AgentId], [a].[ContactInfo], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[UserId], [a0].[AvailablePolicyId], [a0].[BasePremium], [a0].[CoverageDetails], [a0].[CreatedAt], [a0].[CreatedBy], [a0].[Name], [a0].[UpdatedAt], [a0].[UpdatedBy], [a0].[ValidityPeriod]
+FROM [Policies] AS [p]
+INNER JOIN [Agents] AS [a] ON [p].[AgentId] = [a].[AgentId]
+INNER JOIN [AvailablePolicies] AS [a0] ON [p].[AvailablePolicyId] = [a0].[AvailablePolicyId]
+WHERE [p].[CustomerId] = @__customerId_0
+2025-06-15 18:33:29.280 +05:30 [INF] Successfully retrieved 9 registered policies for Customer ID 1.
+2025-06-15 18:33:29.282 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Collections.Generic.IEnumerable`1[[InsurenceManagementSystemWebApi.Applications.DTOs.CustomerPoliciesResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-15 18:33:29.284 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi) in 19.2289ms
+2025-06-15 18:33:29.286 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:33:29.288 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/policies - 200 null application/json; charset=utf-8 42.4656ms
+2025-06-15 18:33:47.849 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - null null
+2025-06-15 18:33:47.853 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:33:47.855 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:33:47.857 +05:30 [INF] Route matched with {action = "GetAllAvailablePolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto]]] GetAllAvailablePolicies(Int32, Int32) on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:33:47.862 +05:30 [INF] Attempting to retrieve all available policies for customer. Page: 1, Size: 10
+2025-06-15 18:33:47.879 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[ValidityPeriod]
+FROM [AvailablePolicies] AS [a]
+2025-06-15 18:33:47.882 +05:30 [INF] Successfully retrieved 6 available policies for page 1.
+2025-06-15 18:33:47.884 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-15 18:33:47.885 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi) in 23.4314ms
+2025-06-15 18:33:47.887 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - null null
+2025-06-15 18:33:47.888 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:33:47.891 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:33:47.893 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - 200 null application/json; charset=utf-8 44.2464ms
+2025-06-15 18:33:47.895 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:33:47.902 +05:30 [INF] Route matched with {action = "GetAllAvailablePolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto]]] GetAllAvailablePolicies(Int32, Int32) on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:33:47.904 +05:30 [INF] Attempting to retrieve all available policies for customer. Page: 1, Size: 10
+2025-06-15 18:33:47.908 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[ValidityPeriod]
+FROM [AvailablePolicies] AS [a]
+2025-06-15 18:33:47.911 +05:30 [INF] Successfully retrieved 6 available policies for page 1.
+2025-06-15 18:33:47.913 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-15 18:33:47.915 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi) in 10.935ms
+2025-06-15 18:33:47.917 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:33:47.919 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - 200 null application/json; charset=utf-8 31.3338ms
+2025-06-15 18:33:50.450 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/policies - null null
+2025-06-15 18:33:50.460 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:33:50.470 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:33:50.472 +05:30 [INF] Route matched with {action = "GetRegisteredPolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRegisteredPolicies() on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:33:50.477 +05:30 [INF] Attempting to retrieve registered policies for customer.
+2025-06-15 18:33:50.495 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PolicyId], [p].[AgentId], [p].[AvailablePolicyId], [p].[CreatedAt], [p].[CreatedBy], [p].[CustomerId], [p].[ExpiryDate], [p].[IssuedDate], [p].[UpdatedAt], [p].[UpdatedBy], [a].[AgentId], [a].[ContactInfo], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[UserId], [a0].[AvailablePolicyId], [a0].[BasePremium], [a0].[CoverageDetails], [a0].[CreatedAt], [a0].[CreatedBy], [a0].[Name], [a0].[UpdatedAt], [a0].[UpdatedBy], [a0].[ValidityPeriod]
+FROM [Policies] AS [p]
+INNER JOIN [Agents] AS [a] ON [p].[AgentId] = [a].[AgentId]
+INNER JOIN [AvailablePolicies] AS [a0] ON [p].[AvailablePolicyId] = [a0].[AvailablePolicyId]
+WHERE [p].[CustomerId] = @__customerId_0
+2025-06-15 18:33:50.499 +05:30 [INF] Successfully retrieved 9 registered policies for Customer ID 1.
+2025-06-15 18:33:50.501 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Collections.Generic.IEnumerable`1[[InsurenceManagementSystemWebApi.Applications.DTOs.CustomerPoliciesResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-15 18:33:50.503 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi) in 26.6009ms
+2025-06-15 18:33:50.505 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:33:50.506 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/policies - 200 null application/json; charset=utf-8 55.8989ms
+2025-06-15 18:33:59.959 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - null null
+2025-06-15 18:33:59.961 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:33:59.962 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi)'
+2025-06-15 18:33:59.972 +05:30 [INF] Route matched with {action = "GetPolicyRequests", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPolicyRequests() on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:33:59.976 +05:30 [INF] Attempting to retrieve policy requests for customer.
+2025-06-15 18:33:59.989 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[RequestId], [p].[AvailablePolicyId], [p].[CreatedAt], [p].[CreatedBy], [p].[CustomerId], [p].[RequestedOn], [p].[Status], [p].[UpdatedAt], [p].[UpdatedBy]
+FROM [PolicyRequests] AS [p]
+WHERE [p].[CustomerId] = @__customerId_0
+2025-06-15 18:33:59.994 +05:30 [INF] Successfully retrieved 10 policy requests for Customer ID 1.
+2025-06-15 18:33:59.996 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Collections.Generic.IEnumerable`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PolicyRequestStatusResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-15 18:33:59.997 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi) in 20.5749ms
+2025-06-15 18:33:59.998 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetPolicyRequests (InsurenceManagementSystemWebApi)'
+2025-06-15 18:33:59.999 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/policy-requests - 200 null application/json; charset=utf-8 40.2628ms
+2025-06-15 18:35:11.233 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - null null
+2025-06-15 18:35:11.238 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:35:11.241 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:35:11.242 +05:30 [INF] Route matched with {action = "GetAllAvailablePolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto]]] GetAllAvailablePolicies(Int32, Int32) on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:35:11.247 +05:30 [INF] Attempting to retrieve all available policies for customer. Page: 1, Size: 10
+2025-06-15 18:35:11.258 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[ValidityPeriod]
+FROM [AvailablePolicies] AS [a]
+2025-06-15 18:35:11.262 +05:30 [INF] Successfully retrieved 6 available policies for page 1.
+2025-06-15 18:35:11.264 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-15 18:35:11.267 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi) in 20.4944ms
+2025-06-15 18:35:11.270 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - null null
+2025-06-15 18:35:11.270 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:35:11.273 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:35:11.274 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - 200 null application/json; charset=utf-8 40.8506ms
+2025-06-15 18:35:11.284 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:35:11.288 +05:30 [INF] Route matched with {action = "GetAllAvailablePolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto]]] GetAllAvailablePolicies(Int32, Int32) on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:35:11.291 +05:30 [INF] Attempting to retrieve all available policies for customer. Page: 1, Size: 10
+2025-06-15 18:35:11.294 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[ValidityPeriod]
+FROM [AvailablePolicies] AS [a]
+2025-06-15 18:35:11.295 +05:30 [INF] Successfully retrieved 6 available policies for page 1.
+2025-06-15 18:35:11.297 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-15 18:35:11.298 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi) in 7.5078ms
+2025-06-15 18:35:11.300 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:35:11.301 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - 200 null application/json; charset=utf-8 31.9223ms
+2025-06-15 18:35:15.966 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/notifications - null null
+2025-06-15 18:35:15.971 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:35:15.972 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetMyNotifications (InsurenceManagementSystemWebApi)'
+2025-06-15 18:35:15.975 +05:30 [INF] Route matched with {action = "GetMyNotifications", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMyNotifications() on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:35:15.978 +05:30 [INF] Attempting to retrieve notifications for customer.
+2025-06-15 18:35:15.998 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[NotificationId], [n].[AgentId], [n].[CreatedAt], [n].[CustomerId], [n].[Message]
+FROM [Notifications] AS [n]
+WHERE [n].[CustomerId] = @__customerId_0
+2025-06-15 18:35:16.010 +05:30 [INF] Successfully retrieved 12 notifications for Customer ID 1.
+2025-06-15 18:35:16.012 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Collections.Generic.IEnumerable`1[[InsurenceManagementSystemWebApi.Applications.DTOs.NotificationResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-15 18:35:16.015 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetMyNotifications (InsurenceManagementSystemWebApi) in 38.1135ms
+2025-06-15 18:35:16.017 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetMyNotifications (InsurenceManagementSystemWebApi)'
+2025-06-15 18:35:16.017 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/notifications - 200 null application/json; charset=utf-8 51.6874ms
+2025-06-15 18:35:31.139 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - null null
+2025-06-15 18:35:31.152 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:35:31.154 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:35:31.160 +05:30 [INF] Route matched with {action = "GetAllAvailablePolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto]]] GetAllAvailablePolicies(Int32, Int32) on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:35:31.165 +05:30 [INF] Attempting to retrieve all available policies for customer. Page: 1, Size: 10
+2025-06-15 18:35:31.171 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[ValidityPeriod]
+FROM [AvailablePolicies] AS [a]
+2025-06-15 18:35:31.177 +05:30 [INF] Successfully retrieved 6 available policies for page 1.
+2025-06-15 18:35:31.180 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-15 18:35:31.183 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi) in 18.5306ms
+2025-06-15 18:35:31.186 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - null null
+2025-06-15 18:35:31.187 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:35:31.190 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:35:31.192 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - 200 null application/json; charset=utf-8 53.0909ms
+2025-06-15 18:35:31.194 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:35:31.201 +05:30 [INF] Route matched with {action = "GetAllAvailablePolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto]]] GetAllAvailablePolicies(Int32, Int32) on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:35:31.203 +05:30 [INF] Attempting to retrieve all available policies for customer. Page: 1, Size: 10
+2025-06-15 18:35:31.207 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AvailablePolicyId], [a].[BasePremium], [a].[CoverageDetails], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[ValidityPeriod]
+FROM [AvailablePolicies] AS [a]
+2025-06-15 18:35:31.210 +05:30 [INF] Successfully retrieved 6 available policies for page 1.
+2025-06-15 18:35:31.212 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.PagedResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.AvailablePolicyResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-15 18:35:31.213 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi) in 10.4393ms
+2025-06-15 18:35:31.215 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetAllAvailablePolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:35:31.216 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/available-policies?page=1&size=10 - 200 null application/json; charset=utf-8 30.8184ms
+2025-06-15 18:35:34.635 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/api/Customer/policies - null null
+2025-06-15 18:35:34.647 +05:30 [INF] CORS policy execution successful.
+2025-06-15 18:35:34.651 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:35:34.656 +05:30 [INF] Route matched with {action = "GetRegisteredPolicies", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRegisteredPolicies() on controller InsurenceManagementSystemWebApi.Controllers.CustomerController (InsurenceManagementSystemWebApi).
+2025-06-15 18:35:34.660 +05:30 [INF] Attempting to retrieve registered policies for customer.
+2025-06-15 18:35:34.672 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PolicyId], [p].[AgentId], [p].[AvailablePolicyId], [p].[CreatedAt], [p].[CreatedBy], [p].[CustomerId], [p].[ExpiryDate], [p].[IssuedDate], [p].[UpdatedAt], [p].[UpdatedBy], [a].[AgentId], [a].[ContactInfo], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[UserId], [a0].[AvailablePolicyId], [a0].[BasePremium], [a0].[CoverageDetails], [a0].[CreatedAt], [a0].[CreatedBy], [a0].[Name], [a0].[UpdatedAt], [a0].[UpdatedBy], [a0].[ValidityPeriod]
+FROM [Policies] AS [p]
+INNER JOIN [Agents] AS [a] ON [p].[AgentId] = [a].[AgentId]
+INNER JOIN [AvailablePolicies] AS [a0] ON [p].[AvailablePolicyId] = [a0].[AvailablePolicyId]
+WHERE [p].[CustomerId] = @__customerId_0
+2025-06-15 18:35:34.675 +05:30 [INF] Successfully retrieved 9 registered policies for Customer ID 1.
+2025-06-15 18:35:34.677 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[System.Collections.Generic.IEnumerable`1[[InsurenceManagementSystemWebApi.Applications.DTOs.CustomerPoliciesResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-15 18:35:34.678 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi) in 17.3744ms
+2025-06-15 18:35:34.680 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.CustomerController.GetRegisteredPolicies (InsurenceManagementSystemWebApi)'
+2025-06-15 18:35:34.683 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/api/Customer/policies - 200 null application/json; charset=utf-8 48.4946ms
+2025-06-15 18:49:52.465 +05:30 [INF] User profile is available. Using 'C:\Users\2403521\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-15 18:49:53.254 +05:30 [INF] Now listening on: https://localhost:7153
+2025-06-15 18:49:53.257 +05:30 [INF] Now listening on: http://localhost:5016
+2025-06-15 18:49:53.539 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-15 18:49:53.541 +05:30 [INF] Hosting environment: Development
+2025-06-15 18:49:53.543 +05:30 [INF] Content root path: C:\Users\2403521\Downloads\XML-DOC-IMS\InsuranceManagementSystem\InsuranceManagementSystem Final\InsurenceManagementSystemWebApi
+2025-06-15 18:49:54.582 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/swagger/index.html - null null
+2025-06-15 18:49:55.658 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/swagger/index.html - 200 null text/html;charset=utf-8 1096.2776ms
+2025-06-15 18:49:55.681 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-15 18:49:55.695 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/_framework/aspnetcore-browser-refresh.js - 200 16547 application/javascript; charset=utf-8 13.8462ms
+2025-06-15 18:49:55.700 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/_vs/browserLink - null null
+2025-06-15 18:49:55.850 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/_vs/browserLink - 200 null text/javascript; charset=UTF-8 150.2279ms
+2025-06-15 18:49:55.941 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7153/swagger/v1/swagger.json - null null
+2025-06-15 18:49:56.136 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7153/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 195.7497ms
+2025-06-15 18:50:24.604 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5016/api/Auth/login - application/json 69
+2025-06-15 18:50:24.646 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5016/api/Auth/login - 307 0 null 43.7873ms
+2025-06-15 18:50:24.684 +05:30 [INF] Request starting HTTP/1.1 POST https://localhost:7153/api/Auth/login - application/json 69
+2025-06-15 18:50:27.335 +05:30 [INF] Executing endpoint 'InsurenceManagementSystemWebApi.Controllers.AuthController.Login (InsurenceManagementSystemWebApi)'
+2025-06-15 18:50:27.409 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(InsurenceManagementSystemWebApi.Applications.DTOs.LoginRequestDto) on controller InsurenceManagementSystemWebApi.Controllers.AuthController (InsurenceManagementSystemWebApi).
+2025-06-15 18:50:28.963 +05:30 [INF] Attempting login for username: Seethayya_1980
+2025-06-15 18:50:34.843 +05:30 [INF] Executed DbCommand (313ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[IsDeleted], [u].[PasswordHash], [u].[UpdatedAt], [u].[UpdatedBy], [u].[Username], [u0].[UserId], [u0].[RoleId], [u0].[CreatedAt], [u0].[CreatedBy], [u0].[UpdatedAt], [u0].[UpdatedBy], [r].[Id], [r].[Name]
+FROM [Users] AS [u]
+LEFT JOIN [UserRoles] AS [u0] ON [u].[Id] = [u0].[UserId]
+LEFT JOIN [Roles] AS [r] ON [u0].[RoleId] = [r].[Id]
+WHERE [u].[Username] = @__username_0
+2025-06-15 18:50:35.869 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[AgentId], [a].[ContactInfo], [a].[CreatedAt], [a].[CreatedBy], [a].[Name], [a].[UpdatedAt], [a].[UpdatedBy], [a].[UserId]
+FROM [Agents] AS [a]
+WHERE [a].[UserId] = @__userId_0
+2025-06-15 18:50:36.114 +05:30 [INF] User 'Seethayya_1980' (User ID: "8180c0f7-1181-4ac8-88a4-5e3deb5d62e1", Role: Agent) logged in successfully.
+2025-06-15 18:50:36.164 +05:30 [INF] Executing OkObjectResult, writing value of type 'InsurenceManagementSystemWebApi.Shared.Common.OperationResult`1[[InsurenceManagementSystemWebApi.Applications.DTOs.LoginResponseDto, InsurenceManagementSystemWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-15 18:50:36.200 +05:30 [INF] Executed action InsurenceManagementSystemWebApi.Controllers.AuthController.Login (InsurenceManagementSystemWebApi) in 8773.9197ms
+2025-06-15 18:50:36.210 +05:30 [INF] Executed endpoint 'InsurenceManagementSystemWebApi.Controllers.AuthController.Login (InsurenceManagementSystemWebApi)'
+2025-06-15 18:50:36.240 +05:30 [INF] Request finished HTTP/1.1 POST https://localhost:7153/api/Auth/login - 200 null application/json; charset=utf-8 11556.4411ms

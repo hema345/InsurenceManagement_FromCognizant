@@ -1,0 +1,44 @@
+2025-05-23 14:43:45.081 +05:30 [INF] User profile is available. Using 'C:\Users\2403521\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-23 14:43:45.516 +05:30 [INF] Now listening on: http://localhost:5016
+2025-05-23 14:43:45.646 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-23 14:43:45.647 +05:30 [INF] Hosting environment: Development
+2025-05-23 14:43:45.649 +05:30 [INF] Content root path: C:\Users\2403521\Downloads\InsuranceManagementSystemFinal\InsuranceManagementSystem\InsuranceManagementSystem Final\InsurenceManagementSystemWebApi
+2025-05-23 14:43:46.964 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/swagger/index.html - null null
+2025-05-23 14:43:49.915 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/swagger/index.html - 200 null text/html;charset=utf-8 2964.1856ms
+2025-05-23 14:43:49.941 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-23 14:43:49.947 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/_framework/aspnetcore-browser-refresh.js - 200 16547 application/javascript; charset=utf-8 6.6138ms
+2025-05-23 14:43:49.951 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/_vs/browserLink - null null
+2025-05-23 14:43:50.181 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/_vs/browserLink - 200 null text/javascript; charset=UTF-8 229.7066ms
+2025-05-23 14:43:50.241 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/swagger/v1/swagger.json - null null
+2025-05-23 14:43:50.323 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 81.9614ms
+2025-05-23 14:51:26.041 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/swagger/index.html - null null
+2025-05-23 14:51:26.127 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/swagger/index.html - 200 null text/html;charset=utf-8 88.3798ms
+2025-05-23 14:51:26.160 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/swagger/index.html - null null
+2025-05-23 14:51:26.172 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/swagger/index.html - 200 null text/html;charset=utf-8 12.4591ms
+2025-05-23 14:51:26.212 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/_vs/browserLink - null null
+2025-05-23 14:51:26.215 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-23 14:51:26.225 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/_framework/aspnetcore-browser-refresh.js - 200 16547 application/javascript; charset=utf-8 10.3954ms
+2025-05-23 14:51:26.239 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/_vs/browserLink - 200 null text/javascript; charset=UTF-8 27.085ms
+2025-05-23 14:51:26.293 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/swagger/v1/swagger.json - null null
+2025-05-23 14:51:26.322 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/swagger/index.html - null null
+2025-05-23 14:51:26.331 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/swagger/index.html - 200 null text/html;charset=utf-8 9.257ms
+2025-05-23 14:51:26.352 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 59.0445ms
+2025-05-23 14:51:26.382 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-23 14:51:26.383 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/_vs/browserLink - null null
+2025-05-23 14:51:26.386 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/_framework/aspnetcore-browser-refresh.js - 200 16547 application/javascript; charset=utf-8 3.327ms
+2025-05-23 14:51:26.397 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/_vs/browserLink - 200 null text/javascript; charset=UTF-8 13.2023ms
+2025-05-23 14:51:26.427 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/swagger/v1/swagger.json - null null
+2025-05-23 14:51:26.464 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 36.826ms
+2025-05-23 14:58:55.460 +05:30 [INF] User profile is available. Using 'C:\Users\2403521\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-23 14:58:55.758 +05:30 [INF] Now listening on: http://localhost:5016
+2025-05-23 14:58:55.836 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-23 14:58:55.840 +05:30 [INF] Hosting environment: Development
+2025-05-23 14:58:55.841 +05:30 [INF] Content root path: C:\Users\2403521\Downloads\InsuranceManagementSystemFinal\InsuranceManagementSystem\InsuranceManagementSystem Final\InsurenceManagementSystemWebApi
+2025-05-23 14:58:56.701 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/swagger/index.html - null null
+2025-05-23 14:58:59.132 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/swagger/index.html - 200 null text/html;charset=utf-8 2440.7953ms
+2025-05-23 14:58:59.158 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/_vs/browserLink - null null
+2025-05-23 14:58:59.160 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-23 14:58:59.172 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/_framework/aspnetcore-browser-refresh.js - 200 16547 application/javascript; charset=utf-8 11.3922ms
+2025-05-23 14:58:59.213 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/_vs/browserLink - 200 null text/javascript; charset=UTF-8 55.993ms
+2025-05-23 14:58:59.287 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5016/swagger/v1/swagger.json - null null
+2025-05-23 14:58:59.353 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5016/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 65.525ms
